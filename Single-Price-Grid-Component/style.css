@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+ /* ### Primary */
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+
+/* ### Neutral */
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Gray);
+}
+
+.card {
+    /* max-width: 270px; */
+    width: 270px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tops{
+    background-color: white;
+    padding: 20px;
+}
+
+.tops .join {
+    color: var(--Cyan);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.tops .thirty-day{
+    color: var(--Bright-Yellow);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 15px;
+}
+.tops .gain {
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+    line-height: 1.3rem;
+}
+
+
+.bottoms .left {
+    background-color: var(--Cyan);
+    padding: 20px;
+    color: white;
+}
+.bottoms .left .monthly {
+    margin-bottom: 10px;
+}
+.bottoms .left .price {
+    position: relative;
+    margin-bottom: 10px;
+}
+.bottoms .left .month {
+    font-size: 13px;
+    color: hsla(203, 44%, 93%, 0.5);
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    margin-top: -8.5px;
+    margin-left: 10px;
+}
+
+.bottoms .left .full-access {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+.bottoms .left .sign-up {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px;
+    color: white;
+    background-color: var(--Bright-Yellow);
+    border-radius: 5px;
+    font-family: 'Karla', sans-serif;
+    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.314);
+    margin-bottom: 5px;
+}
+
+.bottoms .left .sign-up:hover {
+    opacity: 0.9;
+}
+.bottoms .left .sign-up:active {
+    transform: translateY(2px);
+}
+.bottoms .right {
+    background-color: hsla(179, 62%, 43%, 0.65);
+    padding: 20px;
+    color: white;
+}
+.bottoms .right .why-us {
+    margin-bottom: 15px;
+}
+.bottoms .right .reasons {
+    font-size: 13px;
+    opacity: 0.6;
+    line-height: 1.1rem;
+}
+
+@media only screen and (min-width:768px) {
+
+    .card {
+        /* max-width: 600px; */
+        width: 550px;
+    }
+
+    .bottoms {
+        display: flex;
+        width: 100%;
+    }
+    .bottoms .left {
+        width: 50%;
+    }
+    .bottoms .right {
+        width: 50%;
+    }
+    .thirty-day {
+        margin-bottom: 10px !important;
+    }
+    .reasons {
+        font-size: 12px !important;
+    }
+
+    .tops,
+    .bottoms .left,
+    .bottoms .right {
+        padding: 30px;
+    }
+    .gain {
+        font-size: 14px !important;
+    }
+
+}
