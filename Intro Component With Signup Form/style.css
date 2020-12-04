@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --Red: hsl(0, 100%, 74%);
+--Green: hsl(154, 59%, 51%);
+
+/* ### Accent */
+--Blue: hsl(248, 32%, 49%);
+
+/* ### Neutral */
+--Dark-Blue: hsl(249, 10%, 26%);
+--Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/bg-intro-mobile.png);
+    background-color: var(--Red);
+    text-align: center;
+    padding: 50px 0;
+
+}
+/* Left Div */
+.left {
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* border: 1px solid yellow; */
+
+}
+
+.left .see {
+    max-width: 400px;
+    margin: 20px auto;
+    line-height: 1.7rem;
+}
+
+/* Right Div */
+
+.right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+}
+
+.right .try-it {
+    color: white;
+    background-color: var(--Blue);
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 13px;
+    border-radius: 7px;
+    padding: 20px 0;
+    font-weight: 300;
+    box-shadow: 0px 7px 2px 0px rgba(0, 0, 0, 0.2);
+    line-height: 1.3rem;
+}
+.right .try-it:hover{
+    /* transform: translateY(-5px); */
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.left .see  span{
+    display: block;
+}
+
+.right .try-it .seven-days {
+    font-weight: 600;
+}
+
+.right .try-it .then {
+    display: block;
+}
+
+.right form {
+    background-color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 10px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.right form input {
+    display: block;
+    width: 100%;
+    margin: 0px auto 35px auto;
+    padding: 13px;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding-left: 20px;
+    color: var(--Dark-Blue);
+}
+
+.right form .btn {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    background-color: var(--Green);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    box-shadow: 0 5px green ;
+
+}
+.right form .btn:active {
+    transform: translateY(4px);
+  }
+.right form .btn:hover {
+    opacity: 0.9;
+}
+
+.right .clicking {
+    font-size: 10px;
+    margin-top: 15px;
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+.right .clicking span.terms {
+    color: var(--Red);
+    font-weight: 700;
+}
+
+/* error */
+.in {
+    position: relative;
+}
+.error-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 20px;
+    display: none;
+}
+
+.error-text {
+    font-size: 10px;
+    position: absolute;
+    color: var(--Red);
+    bottom: -20px;
+    right: 10px;
+    font-weight: 600;
+    font-style: italic;
+    display: none;
+}
+.border-error {
+    border: 3px solid var(--Red);
+}
+
+.original-border {
+    border: 1px solid hsla(246, 25%, 77%, 0.484);
+}
+
+@media only screen and (min-width:1040px) {
+    .container {
+        flex-direction: row;
+    }
+    .left {
+        align-items: flex-end;
+        position: relative;
+        padding-right: 50px;
+    }
+    .left .learn {
+        font-size: 2.7rem;
+        line-height: 3.1rem;
+        padding-right: 90px;
+        /* position: absolute;
+        top: -90px;
+        right: 140px; */
+    }
+
+    .right form,
+    .right .try-it {
+        margin: 0;
+        width: 500px;
+    }
+
+    .right .try-it {
+        margin-bottom: 20px;
+        padding:18px;
+    }
+
+    .left .see {
+        margin:0;
+        text-align: left;
+        font-size: 14px;
+        margin-top: 25px;
+        line-height: 1.4rem;
+        max-width: 450px;
+    }
+    .left .see  span{
+        display: inline;
+    }
+
+    .right .try-it .then {
+        display: inline;
+    }
+}
+
+
+
+
+/* 
+.left {
+    align-items: flex-end;
+    margin-right: 50px;
+}
+
+.container .left .learn {
+    display: inline;
+    width: 100%;
+    font-size: 2.7rem;
+}
+.container .left .see {
+    margin:0;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+} 
+
+.right {
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+}
+.right form {
+    margin: 0;
+    width: 450px;
+}
+.right .try-it {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 450px;
+}
+.see1{
+    text-align: left;
+    max-width: 500px;
+}
+.learn1 {
+    margin-right: 140px;
+    font-size: 2.7rem;
+    line-height: 1.2; */
+}
