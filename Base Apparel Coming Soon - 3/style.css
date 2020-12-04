@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+:root {
+/* ### Primary */
+--Desaturated-Red: hsl(0, 36%, 70%);
+--Soft-Red: hsl(0, 93%, 68%);
+/* ### Neutral */
+--Dark-Grayish-Red: hsl(0, 6%, 24%);
+/* Gradients */
+--color1: hsl(0, 0%, 100%);
+--color2: hsl(0, 100%, 98%);
+--color3: hsl(0, 80%, 86%);
+--color4: hsl(0, 74%, 74%);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+header {
+   padding: 7%;
+   /* 000 */
+   height: auto;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(135deg,  hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+.container .left {
+    margin-bottom: 75px;
+    /* 000 */
+    width: 100%;
+    height: auto;
+    /* padding: 0 30px; */
+
+}
+
+.container .left h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 15px;
+    font-size: 3.2rem;
+    line-height: 3.5rem;
+}
+.container .left h1 span {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+.container .left p {
+    color: var(--Desaturated-Red);
+    line-height: 1.5rem;
+    font-size: .9rem;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.container .left form {
+    position: relative;
+    margin-top: 30px;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    /* margin: 0 auto; */
+    /* for media query */
+    max-width: 380px;
+
+}
+
+.container .left form input {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--Desaturated-Red);
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 30px;
+    color: var(--Dark-Grayish-Red);
+    font-size: 1rem;
+    left: 0;
+    top: 0;
+}
+.container .left form button {
+    height: 100%;
+    position: absolute;
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    box-shadow: 0px 0px 18px 1px #ce9797b1;
+    right: 0px ;
+}
+.container .left form input::placeholder {
+    color: var(--Desaturated-Red);
+    opacity: 0.5;
+}
+.container .left form button:hover {
+    opacity: 0.8;
+    box-shadow: 0px 0px 18px 1px #ce97976a;
+}
+.container .right {
+    background-image: url(./images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    margin-bottom: 50px;
+    background-position: center center;
+}
+
+.overlay {
+    position: relative;
+}  
+.overlay:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0.5;
+    background-color: var(--Desaturated-Red);
+}
+
+.error-icon {
+    position: absolute;
+    right: 110px;
+    top: 50%;
+    margin-top: -12px;
+    display: none;
+}
+.error-text{
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    display: none;
+    font-size: 16px !important;
+}
+.border-error {
+    border: 2px solid var(--Soft-Red) !important;
+}
+@media only screen and (min-width:768px) {
+    header {
+        position: absolute;
+        padding-left: 10%;
+        padding-top: 50px;
+    }
+  .container {
+      flex-direction: row;
+      padding-bottom: 0;
+  }
+  .container .right {
+      height: 100vh;
+      width: 90%;
+      background-image: url(./images/hero-desktop.jpg);
+      margin-bottom: 0;
+  }
+  .container .left {
+      width: 60%;
+      height: 100vh;
+      text-align: left;
+      padding-top: 28vh;
+      padding-left: 10%;
+      background-image: url(./images/bg-pattern-desktop.svg);
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 0;
+      padding-right: 30px;
+      margin-right: 40px;
+  }
+  .container .left h1 {
+      font-size: 5rem;
+      line-height: 5.5rem;
+      letter-spacing: 10px;
+  }
+  .container .left .welcome {
+      display: inline-block;
+      max-width: 450px;
+      font-size: 1.1rem;
+      line-height: 2rem;
+      font-weight: 400;
+  }
+  .container .left form {
+      max-width: 450px;
+  }
+  .container .left button {
+      width: 95px;
+  }
+
+}
