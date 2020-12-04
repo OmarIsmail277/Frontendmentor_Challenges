@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Fylo data storage component</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" class="fylo">
+        <div class="blue-images">
+          <div class="img-div">
+            <img src="./images/icon-document.svg" alt="">
+          </div>
+          <div class="img-div">
+            <img src="./images/icon-folder.svg" alt="">
+          </div>
+          <div class="img-div">
+            <img src="./images/icon-upload.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="storage">
+        <h1 class="gb-left"><span> <span id="demo-1"></span>GB Left</span></h1>
+
+        <p class="usage">You’ve used <span class="gb"> <span id="demo"></span> </span> of your storage</p>
+
+        <div class="slidecontainer">
+          <input type="range" min="0" max="1000" value="815" class="slider" id="myRange">
+          <div class="bend">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
