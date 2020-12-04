@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #19a2ae;
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: top -500px left -250px, bottom -650px right -200px;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  position: relative;
+  width: 350px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-image: url(./images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  transition: all 0.3s;
+}
+.container .card:hover {
+  transform: scale(1.2);
+}
+.container .card img {
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 5px solid white;
+  background-color: white;
+}
+.container .card .info {
+  display: flex;
+  margin-top: 5px;
+}
+.container .card .info .name {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.container .card .info .age {
+  color: #6a6f81;
+  font-weight: 400;
+}
+.container .card .country {
+  color: #6a6f81;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.container .card footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid rgba(45, 50, 72, 0.116);
+  padding: 30px 0 25px 0;
+}
+.container .card footer .numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #2d3248;
+  margin-right: 50px;
+}
+.container .card footer .numbers:last-child {
+  margin-right: 0;
+}
+.container .card footer .numbers p:first-child {
+  letter-spacing: 0.7px;
+}
+.container .card footer .numbers p:nth-child(2) {
+  font-weight: 400;
+  color: #6a6f81;
+  margin-top: 5px;
+  font-size: 11px;
+  letter-spacing: 0.7px;
+}
+
+@media (max-width: 1100px) {
+  body {
+    background-position: top -600px left -700px, bottom -650px right -600px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
