@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+/* Primary */
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+/* Neutral */
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    max-width: 1440px;
+    margin-top: 50px;
+}
+
+header .first {
+    font-weight: 200;
+}
+
+header .art {
+    display: inline-block;
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    width: 500px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.boxes {
+    display: flex;
+    position: relative;
+    /* border: 1px solid salmon; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.middle-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    text-align: left;
+    margin: 20px;
+    padding: 20px;
+    height: 250px;
+    width: 350px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: -10px 10px 10px 0px rgba(42, 53, 145, 0.4);
+    position: relative;
+}
+.box p {
+    color: var(--Grayish-Blue);
+    margin-top: 10px;
+}
+.box-1 {
+border-top: 5px solid var(--Cyan);
+}
+.box-2 {
+border-top: 5px solid var(--Red);
+}
+.box-3 {
+border-top: 5px solid var(--Orange);
+}
+.box-4 {
+border-top: 5px solid var(--Blue);
+}
+
+.b-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+}
+
+@media (max-width:1000px) {
+    .boxes {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .box {
+        margin: 15px 0;
+    }
+    .art {
+        /* max-width: 300px; */
+        width: 100% !important;
+        font-size: 18px;
+        margin-bottom: 50px !important;
+    }
+
+    .card {
+        margin: 30px 0;
+        padding: 0;
+        margin-top: 100px;
+    }
+
+    header {
+        width: 365px !important;
+    }
+    .box p {
+        /* max-width: 250px; */
+        padding-right: 20px;
+    }
+ 
+
+ 
+
+}
