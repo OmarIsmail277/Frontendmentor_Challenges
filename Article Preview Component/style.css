@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root {
+    
+--Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+--Grayish-Blue: hsl(212, 23%, 69%);
+--Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 13px;
+    font-family: 'Manrope',sans-serif;
+    background-color: var(--Light-Grayish-Blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    max-width: 680px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.content {
+    width: 700px;
+    padding: 2.5em;
+}
+
+.drawers {
+    background: url(./images/drawers.jpg) no-repeat;
+    background-size: cover;
+    width: 500px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .profile-image {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile .name {
+    font-weight: 700;
+    line-height: 1.5em;
+    color: hsl(217, 19%, 35%);
+}
+
+.date {
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.title {
+    margin-bottom: 10px;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+.description {
+    margin-bottom: 20px;
+    color: var(--Desaturated-Dark-Blue);
+
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.share-icon {
+    border-radius: 50%;
+    background-color: var(--Light-Grayish-Blue);
+    padding: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+.share-icon:hover {
+    background-color: var(--Grayish-Blue);
+}
+
+.share-icon:active{
+    transform: translateY(2px);
+}
+.hide {
+    position:absolute;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 30px; 
+    height: 10px;
+    /* opacity: 0.9; */
+    border-radius: 10px;
+    margin-top: -115px;
+    margin-left: -100px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.hide::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: hsl(217, 19%, 35%);
+    border-bottom: 0;
+    margin-bottom: -15px;
+    margin-left: -15px;
+}
+
+.hide p {
+    margin-right: 10px;
+    color: var(--Grayish-Blue);
+    opacity: 0.9;
+    letter-spacing: 5px;
+}
+
+ul li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.profile-2 {
+    display: flex;
+}
+.icons li:hover {
+  transform: scale(1.5)
+}
+.appear {
+    visibility: visible;
+    opacity: 1;
+}
+.share-icon-2 {
+    display: none;
+}
+
+
+
+
+@media (max-width:768px) {
+    .card {
+        flex-direction: column;
+        width: 330px;
+        border-radius: 0 0px 10px 10px;
+    }
+    .drawers {
+        height: 205px;
+        width: 100%;
+        background-position: 0px -15px;
+        border-radius: 0;
+    }
+
+
+
+    .content {
+        width: 350px;
+        padding: 2.1em;
+        text-align: left;
+    }
+
+
+    .description {
+        font-weight: 500;
+        width: 300px;
+        line-height: 1.5;
+        font-size: 14px;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+    .title {
+        font-size: 16px;
+        font-weight: 700;
+        max-width: 260px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .like {
+        display: block;
+    }
+
+    .share {
+        margin-right: 10px;
+
+    }
+    .hide::after {
+        border: none;
+    }
+    .hide {
+        margin-top: -30px;
+        margin-left: -268px;
+        border-radius: 0 0px 10px 10px;
+        width: 330.5px;
+        padding: 35px 0;
+        transition: visibility 0s, opacity 0.0s linear;
+
+    }
+    .share-icon-2 {
+        display: flex;
+        margin-left: 50px;
+        visibility: visible;
+        transform: scale(0.85);
+    }
+    .disappear{
+        visibility: hidden;
+    }
+
+    
+
+
+}
+
+
+
+
