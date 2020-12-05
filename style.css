@@ -22,18 +22,25 @@ body {
   align-items: center;
   justify-content: center;
   background-image: url(./Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
-  background-color: salmon;
+  /* background-color: salmon; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3, 400px);
+  margin-bottom: 3rem;
 }
 
-h1 {
-  font-size: 5rem;
-  color: lightgreen;
-  position: absolute;
-  top: 0;
+lottie-player {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(2, 200px);
+  }
+  lottie-player {
+    display: none;
+  }
 }
