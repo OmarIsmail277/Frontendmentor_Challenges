@@ -1,0 +1,320 @@
+@import "config";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    $Very-Pale-Blue-Top-BG-Pattern 35%,
+    #fff 35%
+  );
+  background-repeat: no-repeat;
+
+  &.dark {
+    background: linear-gradient(
+      to bottom,
+      $Very-Dark-Blue-TOP-BG-Pattern 33%,
+      $Very-Dark-Blue-BG 33%
+    );
+    .header {
+      .title {
+        h1 {
+          color: #fff;
+        }
+      }
+      .toggle {
+        h4 {
+          color: $Toggle-Light;
+        }
+      }
+    }
+    .row-1 {
+      .box {
+        background-color: $Dark-Desaturated-Blue-Card-BG;
+        .username {
+          color: $Desaturated-Blue-Text;
+        }
+        .followers {
+          h1 {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .row-2 {
+      .box {
+        .upper-div {
+          p {
+            color: $Desaturated-Blue-Text;
+          }
+        }
+        .lower-div {
+          h1 {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  height: 100vh;
+  //   padding: 3rem 5rem;
+  width: 100%;
+  max-width: 1280px;
+  //   margin: 0 auto;
+  //   margin-bottom: 10rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  //Title
+  .header {
+    width: 96%;
+    margin-bottom: 2.5rem;
+    line-height: 1.3;
+    text-align: left;
+    display: inline-flex;
+    justify-content: space-between;
+
+    .title {
+      p {
+        font-weight: bold;
+        color: $Dark-Grayish-Blue-Text;
+        font-size: 0.9rem;
+      }
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      h4 {
+        color: $Dark-Grayish-Blue-Text;
+        margin-right: 0.5rem;
+      }
+      .checkbox {
+        opacity: 0;
+        position: absolute;
+        &:checked + .label {
+          background: linear-gradient(to left, $Toggle-Dark-1, $Toggle-Dark-2);
+
+          .ball {
+            transform: translateX(24px);
+            background-color: $Very-Dark-Blue-TOP-BG-Pattern;
+          }
+        }
+      }
+      .label {
+        background: $Toggle-Light;
+
+        display: flex;
+        border-radius: 50px;
+        height: 26px;
+        width: 50px;
+        position: relative;
+        .ball {
+          height: 22px;
+          width: 22px;
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          background-color: #fff;
+          border-radius: 50%;
+          transition: all 0.25s linear;
+        }
+      }
+    }
+  }
+  // row-1
+  .row-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    gap: 2rem;
+    .box {
+      background-color: $Light-Grayish-Blue-Card-BG;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-radius: 5px;
+      &.facebook {
+        border-top: 5px solid $Facebook;
+      }
+      &.twitter {
+        border-top: 5px solid $Twitter;
+      }
+      &.instagram {
+        position: relative;
+        border-top: 5px solid transparent;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 5px;
+          background: linear-gradient(to left, $Instagram-1, $Instagram-2);
+          top: -5px;
+          left: 0;
+          border-radius: 5px;
+        }
+      }
+      &.youtube {
+        border-top: 5px solid $YouTube;
+        // .today {
+        //   color: $Brigh-Red;
+        //   i {
+        //     &::before {
+        //       top: -2px !important;
+        //     }
+        //   }
+        // }
+        .today {
+        }
+      }
+      .username {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 0.5rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      .followers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          font-size: 3.5rem;
+        }
+        p {
+          color: $Dark-Grayish-Blue-Text;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 0.9rem;
+        }
+      }
+      .username,
+      .today,
+      .lower-div .percentage {
+        display: flex;
+        padding: 0.5rem;
+        i {
+          position: relative;
+          margin-right: 0.9rem;
+          &::before {
+            position: absolute;
+            top: 4.5px;
+          }
+        }
+      }
+      .today {
+        margin-top: 1rem;
+        font-size: 0.75rem;
+        color: $Lime-Green;
+        font-weight: bold;
+      }
+      i.fa-sort-down {
+        color: $Brigh-Red;
+        &::before {
+          top: -2px !important;
+        }
+        & + p {
+          color: $Brigh-Red;
+        }
+      }
+    }
+  }
+  .overview {
+    color: $Dark-Grayish-Blue-Text;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .row-2 {
+    margin-bottom: 1.5rem;
+    .box.facebook,
+    .box.twitter,
+    .box.instagram,
+    .box.youtube {
+      border: none;
+    }
+    .box.instagram::before {
+      background: none;
+    }
+    .box {
+      padding: 1.5rem;
+      .upper-div,
+      .lower-div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .upper-div {
+        p {
+          color: $Dark-Grayish-Blue-Text;
+          font-size: 0.9rem;
+          font-weight: bold;
+        }
+      }
+      .lower-div {
+        margin-top: 1rem;
+
+        .percentage {
+          padding: 0;
+          color: $Lime-Green;
+          font-size: 0.75rem;
+          font-weight: bold;
+          color: $Lime-Green !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 2rem 7rem;
+    .header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .title {
+        padding-bottom: 1rem;
+        width: 100%;
+      }
+      .toggle {
+        width: 100%;
+        border-top: 1px solid $Desaturated-Blue-Text;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+      }
+    }
+    .row-1 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 3rem;
+    .row-1 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
