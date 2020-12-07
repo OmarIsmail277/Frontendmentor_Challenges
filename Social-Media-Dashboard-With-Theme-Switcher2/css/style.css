@@ -105,6 +105,7 @@ body.light .container .bottom-cards .card-columns .card-column .card_overview-va
   position: relative;
 }
 .container .header .header_right .label .ball {
+  cursor: pointer;
   height: 22px;
   width: 22px;
   position: absolute;
@@ -130,6 +131,10 @@ body.light .container .bottom-cards .card-columns .card-column .card_overview-va
   text-align: center;
   position: relative;
   color: #aeb3cb;
+  transition: all 0.3s;
+}
+.container .cards .card:hover {
+  transform: scale(1.1);
 }
 .container .cards .card::before {
   content: "";

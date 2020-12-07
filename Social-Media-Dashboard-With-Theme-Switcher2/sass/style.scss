@@ -126,6 +126,8 @@ body {
         width: 50px;
         position: relative;
         .ball {
+          cursor: pointer;
+
           height: 22px;
           width: 22px;
           position: absolute;
@@ -156,6 +158,10 @@ body {
       text-align: center;
       position: relative;
       color: $Toggle-Light;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
 
       // Top-Border
       &::before {
