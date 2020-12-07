@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.uppercase {
+  text-transform: uppercase;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e202a;
+  font-family: "Inter", sans-serif;
+}
+body.light {
+  background-color: #fff;
+}
+body.light .background-box {
+  background-color: #f5f7ff;
+}
+body.light .container .header .header_left .header_title {
+  color: #1e202a;
+}
+body.light .container .header .header_right h4 {
+  color: #63687e;
+}
+body.light .container .cards .card {
+  background-color: #f0f2fa;
+}
+body.light .container .cards .card .social-media-tag {
+  color: #63687e;
+}
+body.light .container .cards .card .followers .followers_number {
+  color: #1e202a;
+}
+body.light .container .cards .card .followers .followers_subtext {
+  color: #63687e;
+}
+body.light .container .bottom-cards .card-columns .card-column .card_overview-type {
+  color: #63687e;
+}
+body.light .container .bottom-cards .card-columns .card-column .card_overview-value {
+  color: #1e202a;
+}
+
+.background-box {
+  width: 100%;
+  max-width: 1440px;
+  height: 245px;
+  position: absolute;
+  z-index: -1;
+  background-color: #1f212e;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.container {
+  width: auto;
+  max-width: 1110px;
+  margin: 2.2rem auto;
+}
+.container .header {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.container .header .header_left .header_title {
+  font-size: 1.65rem;
+}
+.container .header .header_left .header_subtext {
+  color: #63687e;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.container .header .header_right {
+  display: flex;
+  align-items: center;
+}
+.container .header .header_right h4 {
+  color: #aeb3cb;
+  margin-right: 0.5rem;
+}
+.container .header .header_right .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.container .header .header_right .checkbox:checked + .label {
+  background: #aeb3cb;
+}
+.container .header .header_right .checkbox:checked + .label .ball {
+  transform: translateX(24px);
+  background-color: #fff;
+}
+.container .header .header_right .label {
+  background: linear-gradient(to left, #378fe6, #3eda82);
+  display: flex;
+  border-radius: 50px;
+  height: 26px;
+  width: 50px;
+  position: relative;
+}
+.container .header .header_right .label .ball {
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #1f212e;
+  border-radius: 50%;
+  transition: all 0.25s linear;
+}
+.container .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+  margin-top: 3rem;
+}
+.container .cards .card {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background-color: #252a41;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  color: #aeb3cb;
+}
+.container .cards .card::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: transparent;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.container .cards .card-fb::before {
+  background-color: #198ff5;
+}
+.container .cards .card-tweet::before {
+  background-color: #1ca0f2;
+}
+.container .cards .card-ig::before {
+  background-color: transparent;
+  background-image: linear-gradient(to left, #fdc468, #df4996);
+}
+.container .cards .card-yt::before {
+  background-color: #c4032a;
+}
+.container .cards .card .social-media-tag {
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .cards .card .social-media-tag img {
+  margin-right: 10px;
+}
+.container .cards .card .followers {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+}
+.container .cards .card .followers_number {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+.container .cards .card .followers_subtext {
+  font-size: 12px;
+  letter-spacing: 6px;
+}
+.container .cards .card .change {
+  color: #1db489;
+  font-weight: 700;
+  font-size: 12px;
+}
+.container .cards .card .change-negative {
+  color: #dc414c;
+}
+.container .bottom-cards {
+  margin-top: 50px;
+}
+.container .bottom-cards h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+}
+.container .bottom-cards .cards {
+  margin-top: 2.5rem;
+}
+.container .bottom-cards .cards .card-columns {
+  display: flex;
+  justify-content: space-between;
+}
+.container .bottom-cards .cards .card-columns .card-column {
+  display: grid;
+  row-gap: 25px;
+  text-align: left;
+}
+.container .bottom-cards .cards .card-columns .card-column .card_overview-type {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.container .bottom-cards .cards .card-columns .card-column .card_overview-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 0.9em;
+}
+.container .bottom-cards .cards .card-columns .card-column:nth-child(2) {
+  text-align: right;
+}
+.container .bottom-cards .cards .card-columns .card-column:nth-child(2) .change {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding: 25px;
+    margin-top: 10px;
+  }
+  .container .header {
+    flex-direction: column;
+  }
+  .container .header .header_left {
+    border-bottom: 1px solid rgba(139, 151, 198, 0.7);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .container .header .header_right {
+    justify-content: space-between;
+  }
+  .container .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
