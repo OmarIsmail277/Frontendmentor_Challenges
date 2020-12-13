@@ -385,7 +385,6 @@ header .intro-images .intro-left-mobile {
 }
 .footer .container .logo .logo-circles {
   transform: scale(2);
-  margin-left: 0;
 }
 .footer .container ul.social-links {
   display: flex;
@@ -576,6 +575,9 @@ header .intro-images .intro-left-mobile {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .footer .container .logo .logo-circles {
+    margin-left: 0;
   }
   .footer .container ul.social-links {
     margin-top: 2.5rem;

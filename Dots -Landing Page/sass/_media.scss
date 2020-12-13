@@ -141,6 +141,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        .logo-circles {
+          margin-left: 0;
+        }
       }
       ul.social-links {
         margin-top: 2.5rem;
