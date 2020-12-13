@@ -1,0 +1,33 @@
+// DM-Serif: Weights: 400, Karla: Weights: 400,700
+// font-family: 'DM Serif Display', serif;
+// ### Primary
+$Dark-Violet: hsl(256, 26%, 20%);
+$Grayish-Blue: hsl(216, 30%, 68%);
+
+// ### Neutral
+$Very-Dark-Violet: hsl(270, 9%, 17%);
+$Dark-Grayish-Violet: hsl(273, 4%, 51%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+/////////////////////////////////////////////
+//General Styling
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: 3.75rem;
+}

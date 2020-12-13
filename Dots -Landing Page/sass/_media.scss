@@ -1,0 +1,186 @@
+@media (max-width: 960px) {
+  header {
+    padding-top: 0;
+    padding-bottom: 120px;
+    position: relative;
+    top: 85px;
+    .intro-family-mobile {
+      display: block;
+      width: 100%;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-content {
+      text-align: center;
+      .line {
+        display: none;
+      }
+      h1 {
+        margin: 0 auto;
+
+        // max-width: 450px;
+        margin-bottom: 1.7rem;
+        margin-top: 90px;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 1.1;
+      }
+      p {
+        // max-width: 550px;
+        margin: 0 auto;
+        margin-bottom: 2.1rem;
+      }
+      a.special-link {
+        display: inline-block;
+        border-color: #fff;
+        color: #fff;
+        &:hover {
+          background-color: #fff;
+          color: $Dark-Violet;
+        }
+      }
+    }
+    .intro-images {
+      .intro-family-desktop {
+        display: none;
+      }
+      .intro-right-desktop {
+        display: none;
+      }
+      .intro-left-desktop {
+        display: none;
+      }
+      .intro-right-mobile {
+        display: unset;
+        position: absolute;
+        bottom: -175px;
+        right: -7px;
+      }
+      .intro-left-mobile {
+        display: none;
+      }
+    }
+  }
+  .middle-section {
+    margin-top: 130px;
+    margin-bottom: 0;
+    text-align: center;
+    .line {
+      margin: auto;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      margin-bottom: 60px;
+      font-size: 3rem;
+    }
+    .advs {
+      grid-template-columns: 1fr;
+      .adv {
+        img {
+          margin-bottom: 35px;
+        }
+        p {
+          max-width: 315px;
+          line-height: 1.5;
+          font-size: 0.9rem;
+          margin: 0 auto;
+          margin-top: 20px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .bottom-section {
+    position: relative;
+    top: 72px;
+    margin-bottom: 145px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 1rem;
+      background-color: $Dark-Violet;
+      color: #fff;
+      position: relative;
+      background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 45% 100%;
+
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      a.special-link {
+        border-color: #fff;
+        font-size: 0.9rem;
+        padding: 12px 1.5rem;
+        color: #fff;
+        &:hover {
+          background-color: #fff;
+          color: $Dark-Violet;
+        }
+      }
+    }
+  }
+  .footer {
+    background-image: url(../images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 15%;
+
+    .container {
+      padding: 60px 0 10px 0;
+      .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      ul.social-links {
+        margin-top: 2.5rem;
+      }
+      .line {
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      .bottom-links {
+        grid-template-columns: 1fr;
+        text-align: center;
+        .col {
+          padding: 2rem 0;
+          border-bottom: 1px dotted $Dark-Violet;
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .links-col {
+            display: flex;
+            flex-direction: column;
+            a {
+              color: $Very-Dark-Violet;
+              font-size: 0.9rem;
+              margin-bottom: 1rem;
+              &:hover {
+                text-decoration: underline;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 300px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+}
