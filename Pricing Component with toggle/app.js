@@ -18,7 +18,7 @@ const checkbox = document.getElementById('checkbox');
 
 function toggle (){
     if(checkbox.checked==true){
-         price1.innerHTML = "19.99";
+        price1.innerHTML = "19.99";
         price2.innerHTML = "24.99";
         price3.innerHTML = "39.99";
        
