@@ -15,25 +15,35 @@
   </head>
   <body>
     <div class="container">
-      <h1>Our Pricing</h1>
-      <div class="plan">
-        <h3>Annually</h3>
-        <div class="toggle">
-          <input
-            type="checkbox"
-            class="checkbox"
-            id="checkbox"
-            onclick="toggle();"
-          />
-          <label for="checkbox" class="label">
-            <div class="ball" id="ball"></div>
-          </label>
+      <!-- Upper Row -->
+      <div class="row-1">
+        <h1>Our Pricing</h1>
+
+        <div class="plan">
+          <h3>Annually</h3>
+          <div class="toggle">
+            <input
+              type="checkbox"
+              class="checkbox"
+              id="checkbox"
+              onclick="toggle();"
+            />
+            <label for="checkbox" class="label">
+              <div class="ball" id="ball"></div>
+            </label>
+          </div>
+          <h3>Monthly</h3>
         </div>
-        <h3>Monthly</h3>
       </div>
-      <div class="choices">
-        <div class="choice">
-          <h3 class="type">Basic</h3>
+
+      <!-- Cards Row -->
+      <div class="cards">
+        <!-- //////// -->
+
+        <!-- Card-1 -->
+        <div class="card">
+          <h4 class="type">Basic</h4>
+          <!-- // -->
           <div class="price">
             <span>&dollar;</span>
             <div id="price-1">199.99</div>
@@ -45,8 +55,10 @@
           </div>
           <button class="btn">Learn More</button>
         </div>
-        <div class="choice popular-choice">
-          <h3 class="type">Professional</h3>
+
+        <!-- Card-2 -->
+        <div class="card" id="popular-card">
+          <h4 class="type">Professional</h4>
           <div class="price">
             <span>&dollar;</span>
             <div id="price-2">249.99</div>
@@ -58,8 +70,10 @@
           </div>
           <button class="btn">Learn More</button>
         </div>
-        <div class="choice">
-          <h3 class="type">Master</h3>
+
+        <!-- Card-3 -->
+        <div class="card">
+          <h4 class="type">Master</h4>
           <div class="price">
             <span>&dollar;</span>
             <div id="price-3">399.99</div>
@@ -71,10 +85,11 @@
           </div>
           <button class="btn">Learn More</button>
         </div>
-        <!-- <div class="choice"></div>
-        <div class="choice"></div> -->
+        <!-- //////////////////// -->
       </div>
+      <!-- End of cards div -->
     </div>
+    <!-- End of container div -->
     <script src="./app.js"></script>
   </body>
 </html>
@@ -84,7 +99,7 @@
   Monthly
 
   Basic
-  &dollar;19.99g
+  &dollar;19.99
   &dollar;199.99
   500 GB Storage
   2 Users Allowed
