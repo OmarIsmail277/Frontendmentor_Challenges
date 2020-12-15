@@ -28,16 +28,17 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  // justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 2rem;
-  width: 1200px;
+  padding-top: 3.5%;
+  width: 1350px;
+  // width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding-bottom: 50px;
+  // padding-bottom: 50px;
   padding-right: 1rem;
   padding-left: 1rem;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   h1 {
     margin-bottom: 2.1rem;
@@ -72,7 +73,7 @@ body {
       display: flex;
     }
     .ball {
-      height: 24px;
+      height: 25px;
       width: 25px;
       background-color: $Very-Light-Grayish-Blue;
       position: absolute;
@@ -99,25 +100,55 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
+    // margin-right: 1rem;
     // width: 400px;
-
     // width: 90%;
     width: 33%;
     margin: 0 auto;
-    height: 450px;
+    // height: 450px;
     background-color: #fff;
     border-radius: 10px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     padding-right: 3rem;
     padding-left: 3rem;
     text-align: center;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    &.popular-choice {
+      background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+      transform: scale(1.1);
+      color: $Very-Light-Grayish-Blue;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      padding-top: 3.3rem;
+      padding-bottom: 3rem;
+      .price {
+        color: $Very-Light-Grayish-Blue;
+      }
+      h3,
+      h4 {
+        color: $Very-Light-Grayish-Blue;
+      }
+      .advs {
+        h4 {
+          border-top-color: $Very-Light-Grayish-Blue;
+          border-bottom-color: $Very-Light-Grayish-Blue !important;
+        }
+      }
+      .btn {
+        background-image: none;
+        background-color: $Very-Light-Grayish-Blue;
+        color: hsl(237, 63%, 64%);
+        &:hover {
+          background-color: transparent;
+          background-image: none;
+          border-color: #fff;
+          color: #fff;
+        }
+      }
+    }
     &:last-child {
       margin-right: 0;
     }
-
     .price {
       display: flex;
       align-items: center;
@@ -143,7 +174,7 @@ body {
       h4 {
         border-top: 1px dotted $Grayish-Blue;
         width: 100%;
-        padding: 1.1rem;
+        padding: 1.1rem 0;
         &:last-child {
           border-bottom: 1px dotted $Grayish-Blue;
           margin-bottom: 2rem;
@@ -163,51 +194,21 @@ body {
       font-family: "Montserrat", sans-serif;
       font-weight: normal;
       letter-spacing: 2px;
-      transition: all 0.3s;
+      transition: all 0.5s;
       border: 1px solid transparent;
       background-color: transparent;
 
       &:hover {
-        background-image: linear-gradient(#fff, #fff);
+        // background-image: linear-gradient(#fff, #fff);
+        background-image: none;
         border-color: hsl(237, 63%, 64%);
         color: hsl(237, 63%, 64%);
-      }
-    }
-
-    &:nth-child(2) {
-      background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-      transform: scale(1.1);
-      color: $Very-Light-Grayish-Blue;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-      padding-top: 3rem;
-      .price {
-        color: $Very-Light-Grayish-Blue;
-      }
-      h3,
-      h4 {
-        color: $Very-Light-Grayish-Blue;
-      }
-      .advs {
-        h4 {
-          border-top-color: $Very-Light-Grayish-Blue;
-          border-bottom-color: $Very-Light-Grayish-Blue;
-        }
-      }
-      .btn {
-        background-image: none;
-        background-color: $Very-Light-Grayish-Blue;
-        color: hsl(237, 63%, 64%);
-        &:hover {
-          background-color: transparent;
-          border-color: #fff;
-          color: #fff;
-        }
       }
     }
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1140px) {
   body {
     background-image: url(../images/bg-top.svg);
     background-repeat: no-repeat;
@@ -222,8 +223,12 @@ body {
       max-width: 400px;
       .choice {
         margin-right: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
 
         // width: 350px;
         // height: 450px;
@@ -233,14 +238,13 @@ body {
 
         &:nth-child(2) {
           transform: unset;
-          padding-top: 2rem;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 320px) {
   body {
     font-size: 13px;
   }

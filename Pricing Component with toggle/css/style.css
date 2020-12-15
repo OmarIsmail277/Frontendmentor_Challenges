@@ -17,16 +17,14 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding-top: 2rem;
-  width: 1200px;
+  padding-top: 3.5%;
+  width: 1350px;
   max-width: 100%;
   margin: 0 auto;
-  padding-bottom: 50px;
   padding-right: 1rem;
   padding-left: 1rem;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 .container h1 {
@@ -61,7 +59,7 @@ body {
   display: flex;
 }
 .plan .toggle .ball {
-  height: 24px;
+  height: 25px;
   width: 25px;
   background-color: #f6f6fe;
   position: absolute;
@@ -82,18 +80,46 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 1rem;
   width: 33%;
   margin: 0 auto;
-  height: 450px;
   background-color: #fff;
   border-radius: 10px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   padding-right: 3rem;
   padding-left: 3rem;
   text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.choices .choice.popular-choice {
+  background-image: linear-gradient(#a3a8f0, #696fdd);
+  transform: scale(1.1);
+  color: #f6f6fe;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding-top: 3.3rem;
+  padding-bottom: 3rem;
+}
+.choices .choice.popular-choice .price {
+  color: #f6f6fe;
+}
+.choices .choice.popular-choice h3,
+.choices .choice.popular-choice h4 {
+  color: #f6f6fe;
+}
+.choices .choice.popular-choice .advs h4 {
+  border-top-color: #f6f6fe;
+  border-bottom-color: #f6f6fe !important;
+}
+.choices .choice.popular-choice .btn {
+  background-image: none;
+  background-color: #f6f6fe;
+  color: #696fdd;
+}
+.choices .choice.popular-choice .btn:hover {
+  background-color: transparent;
+  background-image: none;
+  border-color: #fff;
+  color: #fff;
 }
 .choices .choice:last-child {
   margin-right: 0;
@@ -120,7 +146,7 @@ body {
 .choices .choice .advs h4 {
   border-top: 1px dotted #6d708d;
   width: 100%;
-  padding: 1.1rem;
+  padding: 1.1rem 0;
 }
 .choices .choice .advs h4:last-child {
   border-bottom: 1px dotted #6d708d;
@@ -139,45 +165,17 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   letter-spacing: 2px;
-  transition: all 0.3s;
+  transition: all 0.5s;
   border: 1px solid transparent;
   background-color: transparent;
 }
 .choices .choice .btn:hover {
-  background-image: linear-gradient(#fff, #fff);
+  background-image: none;
   border-color: #696fdd;
   color: #696fdd;
 }
-.choices .choice:nth-child(2) {
-  background-image: linear-gradient(#a3a8f0, #696fdd);
-  transform: scale(1.1);
-  color: #f6f6fe;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  padding-top: 3rem;
-}
-.choices .choice:nth-child(2) .price {
-  color: #f6f6fe;
-}
-.choices .choice:nth-child(2) h3,
-.choices .choice:nth-child(2) h4 {
-  color: #f6f6fe;
-}
-.choices .choice:nth-child(2) .advs h4 {
-  border-top-color: #f6f6fe;
-  border-bottom-color: #f6f6fe;
-}
-.choices .choice:nth-child(2) .btn {
-  background-image: none;
-  background-color: #f6f6fe;
-  color: #696fdd;
-}
-.choices .choice:nth-child(2) .btn:hover {
-  background-color: transparent;
-  border-color: #fff;
-  color: #fff;
-}
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1140px) {
   body {
     background-image: url(../images/bg-top.svg);
     background-repeat: no-repeat;
@@ -195,18 +193,21 @@ body {
   }
   .container .choices .choice {
     margin-right: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .container .choices .choice .price {
     font-size: 3.5rem;
   }
   .container .choices .choice:nth-child(2) {
     transform: unset;
-    padding-top: 2rem;
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 320px) {
   body {
     font-size: 13px;
   }
