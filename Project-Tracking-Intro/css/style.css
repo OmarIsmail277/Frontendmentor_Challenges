@@ -187,13 +187,16 @@ nav .container .nav-links li a:hover {
   }
   nav .container .burger {
     display: block;
-  }
-  nav .container .burger .open {
-    display: inline;
     cursor: pointer;
   }
   nav .container .burger .close {
     display: none;
+  }
+  nav .container .burger.show .open {
+    display: none;
+  }
+  nav .container .burger.show .close {
+    display: block;
   }
   nav .container .nav-links {
     position: absolute;

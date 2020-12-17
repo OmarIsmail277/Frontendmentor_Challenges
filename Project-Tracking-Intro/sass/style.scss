@@ -224,12 +224,17 @@ nav {
       align-items: center;
       .burger {
         display: block;
-        .open {
-          display: inline;
-          cursor: pointer;
-        }
+        cursor: pointer;
         .close {
           display: none;
+        }
+        &.show {
+          .open {
+            display: none;
+          }
+          .close {
+            display: block;
+          }
         }
       }
       .nav-links {

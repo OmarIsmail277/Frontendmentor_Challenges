@@ -6,4 +6,5 @@ document.getElementById("burger").addEventListener("click", myfunction);
 
 function myfunction(){
 navlinks.classList.toggle('show');
+burger.classList.toggle('show');
 }
