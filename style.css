@@ -2,13 +2,36 @@
 body {
   font-family: "JetBrains Mono", monospace;
 }
-a {
+/* body::after {
+  position: absolute;
+  z-index: -1111;
+  height: 100%;
+  width: 100%;
+  background-color: #f64f59;
+  opacity: 0.5;
+} */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  /* background-image: url(/bg-photo.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(65, 19, 180, 0.5); /* Black background with opacity */
+  z-index: -1;
+}
+/* a {
   display: block;
   margin: 1.5rem 0;
   text-decoration: none;
   background-color: black;
   padding: 1rem;
-  width: 350px;
+  display: block;
+  m
   color: white;
   font-family: "JetBrains Mono", monospace;
   transition: all 0.3s;
@@ -20,23 +43,28 @@ a:hover {
   transform: translateX(30px);
   color: violet;
 }
-a.new::after {
+.new {
   font-family: sans-serif;
-  content: "NEW";
+  text-transform: uppercase;
   color: #fff;
-  background: #12c2e9; /* fallback for old browsers */
+  background: #12c2e9;  sans-serif;
+  text-transform:
   background: -webkit-linear-gradient(
     to right,
     #f64f59,
     #c471ed,
     #12c2e9
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); kground: -webkit-linear-gradient
   background: linear-gradient(
     to right,
     #f64f59,
     #c471ed,
     #12c2e9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); kground: linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+
   border-radius: 5px;
   font-size: 0.5rem;
   padding: 0.2rem;
@@ -44,6 +72,22 @@ a.new::after {
   margin-left: 0.5rem;
   display: inline-block;
   position: absolute;
-  /* top: -5px; */
+  padding: 0.2rem;
   bottom: 17px;
 }
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 200px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+} */
