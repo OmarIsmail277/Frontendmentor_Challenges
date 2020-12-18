@@ -55,6 +55,7 @@ body {
       font-family: "Langar", cursive;
       font-weight: normal;
       letter-spacing: 1px;
+      font-size: 60px;
     }
   }
 }
@@ -74,6 +75,7 @@ body {
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
       border-radius: 5px;
       overflow: hidden;
+
       .project-image {
         height: 60%;
         width: 100%;
@@ -135,6 +137,9 @@ body {
 @media (max-width: 768px) {
   body {
     font-size: 13px;
+    h1 {
+      font-size: 40px !important;
+    }
   }
   .gallery {
     .container {

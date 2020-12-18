@@ -43,6 +43,7 @@ body {
   font-family: "Langar", cursive;
   font-weight: normal;
   letter-spacing: 1px;
+  font-size: 60px;
 }
 
 .gallery .container {
@@ -112,6 +113,9 @@ body {
 @media (max-width: 768px) {
   body {
     font-size: 13px;
+  }
+  body h1 {
+    font-size: 40px !important;
   }
 
   .gallery .container {
