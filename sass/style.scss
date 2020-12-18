@@ -57,6 +57,18 @@ body {
       letter-spacing: 1px;
       font-size: 60px;
     }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 35px;
+        height: 35px;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
   }
 }
 
@@ -136,9 +148,22 @@ body {
 
 @media (max-width: 768px) {
   body {
-    font-size: 13px;
+    font-size: 12px;
     h1 {
       font-size: 40px !important;
+    }
+  }
+
+  .header {
+    .container {
+      p {
+        img {
+          width: 25px;
+          height: 25px;
+          margin-right: 0.35rem;
+          margin-left: 0.35rem;
+        }
+      }
     }
   }
   .gallery {
