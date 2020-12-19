@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.container {
+  width: 1140px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4c545d;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #9fabb2;
+  line-height: 1.5;
+}
+
+.header {
+  background-image: url(/images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+.header .container h1 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.header .container p {
+  max-width: 630px;
+  margin-bottom: 2rem;
+}
+.header .container .buttons .btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+.header .container .buttons .btn:active {
+  transform: translateY(4px);
+}
+.header .container .buttons .btn:hover {
+  opacity: 0.9;
+}
+.header .container .buttons .btn.btn-ios {
+  background-color: #26baa4;
+  box-shadow: 0 5px 5px #1d907f;
+  margin-right: 0.5rem;
+}
+.header .container .buttons .btn.btn-mac {
+  background-color: #6173ff;
+  box-shadow: 0 5px 5px #2e46ff;
+  margin-left: 0.5rem;
+}
+
+.top-section {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+.top-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.top-section .container .keep-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.top-section .container .keep-track p {
+  margin-top: 1rem;
+  max-width: 690px;
+}
+.top-section .container .mac-desktop {
+  margin-top: 3rem;
+}
+.top-section .container .mac-desktop .mac-image {
+  margin-right: 3rem;
+}
+.top-section .container .mac-desktop .advs {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+}
+.top-section .container .mac-desktop .advs .adv {
+  margin-bottom: 2rem;
+}
+.top-section .container .mac-desktop .advs .adv:last-child {
+  margin-bottom: 0;
+}
+
+.middle-section {
+  margin-bottom: 5rem;
+}
+.middle-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.middle-section .container .access {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.second-middle-section .container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+}
+.second-middle-section .container .supercharge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.second-middle-section .container .tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+}
+.second-middle-section .container .tools .tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+.second-middle-section .container .tools .tool h3 {
+  margin-top: 2rem;
+}
+.second-middle-section .container .tools .tool p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.clients {
+  margin-top: 120px;
+  margin-bottom: 140px;
+}
+.clients .container {
+  justify-content: space-between;
+}
+.clients .container img {
+  margin-right: 1.5rem;
+}
+
+.bottom-section {
+  margin-bottom: 140px;
+}
+.bottom-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.bottom-section .container h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.bottom-section .container p {
+  max-width: 670px;
+  margin-bottom: 2rem;
+}
+.bottom-section .container .buttons .btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+.bottom-section .container .buttons .btn:active {
+  transform: translateY(4px);
+}
+.bottom-section .container .buttons .btn:hover {
+  opacity: 0.9;
+}
+.bottom-section .container .buttons .btn.btn-ios {
+  background-color: #26baa4;
+  box-shadow: 0 5px 5px #1d907f;
+  margin-right: 0.5rem;
+}
+.bottom-section .container .buttons .btn.btn-mac {
+  background-color: #6173ff;
+  box-shadow: 0 5px 5px #2e46ff;
+  margin-left: 0.5rem;
+}
+
+.footer .container {
+  justify-content: space-evenly;
+  padding: 2.5rem 0;
+  background-color: rgba(159, 171, 178, 0.116);
+  width: 100%;
+}
+.footer .container .footer-logo img {
+  width: 55px;
+  height: 55px;
+}
+.footer .container .links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 1rem;
+}
+.footer .container .links a {
+  text-decoration: none;
+  color: #4c545d;
+  transition: all 0.3s;
+}
+.footer .container .links a:hover {
+  color: #26baa4;
+  text-decoration: underline;
+}
+.footer .container .social-links {
+  display: flex;
+}
+.footer .container .social-links li {
+  list-style: none;
+  margin-right: 2rem;
+}
+.footer .container .social-links li:last-child {
+  margin-right: 0;
+}
+.footer .container .social-links li a {
+  color: #4c545d;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 2rem;
+}
+.footer .container .social-links li a:hover {
+  color: #26baa4;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .header {
+    background-image: url(/images/bg-header-mobile.png);
+  }
+  .header .container h1 {
+    max-width: 400px;
+  }
+  .header .container p {
+    max-width: 310px;
+    font-size: 1rem;
+  }
+  .header .container .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .header .container .buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  .header .container .buttons .btn.btn-ios {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .header .container .buttons .btn.btn-mac {
+    margin-left: 0;
+  }
+
+  .top-section .container .keep-track h2 {
+    max-width: 400px;
+  }
+  .top-section .container .keep-track p {
+    max-width: 300px;
+  }
+  .top-section .container .mac-desktop {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .top-section .container .mac-desktop .mac-image {
+    margin-right: 0;
+    width: 100%;
+  }
+  .top-section .container .mac-desktop .mac-image img {
+    width: 100%;
+  }
+  .top-section .container .mac-desktop .advs {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .top-section .container .mac-desktop .advs .adv p {
+    max-width: 300px;
+    margin-top: 1rem;
+  }
+
+  .middle-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .middle-section .container .access {
+    margin-bottom: 3.5rem;
+  }
+  .middle-section .container .access h2 {
+    font-size: 1.7rem;
+    max-width: 300px;
+  }
+  .middle-section .container .access p {
+    max-width: 300px;
+  }
+  .middle-section .container img {
+    width: 100%;
+  }
+
+  .second-middle-section .container .supercharge {
+    text-align: center;
+  }
+  .second-middle-section .container .supercharge h2 {
+    font-size: 1.7rem;
+    max-width: 300px;
+  }
+  .second-middle-section .container .supercharge p {
+    max-width: 300px;
+  }
+  .second-middle-section .container .tools {
+    grid-template-columns: 1fr;
+    column-gap: unset;
+  }
+  .second-middle-section .container .tools .tool p {
+    max-width: 320px;
+  }
+
+  .clients {
+    margin-top: 120px;
+    margin-bottom: 70px;
+  }
+  .clients .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .clients .container img {
+    margin-right: 0;
+    margin-bottom: 4.5rem;
+  }
+
+  .bottom-section {
+    margin-bottom: 140px;
+  }
+  .bottom-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .bottom-section .container h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    max-width: 300px;
+  }
+  .bottom-section .container p {
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+  .bottom-section .container .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .bottom-section .container .buttons .btn {
+    width: 100%;
+  }
+  .bottom-section .container .buttons .btn.btn-ios {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .bottom-section .container .buttons .btn.btn-mac {
+    margin-left: 0;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 0;
+    background-color: rgba(159, 171, 178, 0.116);
+    width: 100%;
+  }
+  .footer .container .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .footer .container .footer-logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .footer .container .links {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    column-gap: unset;
+    row-gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .footer .container .links a {
+    text-decoration: none;
+    color: #4c545d;
+    transition: all 0.3s;
+  }
+  .footer .container .links a:hover {
+    color: #26baa4;
+    text-decoration: underline;
+  }
+  .footer .container .social-links {
+    display: flex;
+  }
+  .footer .container .social-links li {
+    list-style: none;
+    margin-right: 2rem;
+  }
+  .footer .container .social-links li:last-child {
+    margin-right: 0;
+  }
+  .footer .container .social-links li a {
+    color: #4c545d;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 2rem;
+  }
+  .footer .container .social-links li a:hover {
+    color: #26baa4;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
