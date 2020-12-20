@@ -48,7 +48,7 @@ p {
 }
 
 .header {
-  background-image: url(/images/bg-header-desktop.png);
+  background-image: url(../images/bg-header-desktop.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -296,7 +296,7 @@ p {
   }
 
   .header {
-    background-image: url(/images/bg-header-mobile.png);
+    background-image: url(../images/bg-header-mobile.png);
   }
   .header .container h1 {
     max-width: 400px;
