@@ -22,14 +22,19 @@
 //   z-index: -1;
 //   background-color: #130f40;
 // }
-
+html {
+  height: 100%;
+}
 body {
   font-family: "Indie Flower", cursive;
   font-weight: bold;
   font-size: 18px;
   color: #fff;
-  height: 100vh;
+  height: 100%;
   background-image: url(/Projects/Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  // url(/Projects/Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
   background-color: #130f40;
 }
 
