@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+      <div class="card">
+        <div class="top__row">
+          <div class="top__row--header">
+            <h4 class="views"><span id="page-views">100K</span> Pageviews</h4>
+
+            <div class="price">
+              <h1>
+                <span id="price-demo">$16.00</span>
+                <span class="per-month">/month</span>
+              </h1>
+            </div>
+          </div>
+
+          <div class="slider__row slider__row-secondary">
+            <input type="range" class="slider" id="slider" name="slider" />
+          </div>
+        </div>
+
+        <div class="toggle__row">
+          <div class="toggle__btn">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="label">
+              <div class="ball"></div>
+            </label>
+            <p id="monthly">Monthly Billing</p>
+
+            <p id="yearly">Yearly Billing</p>
+          </div>
+          <p class="discount">
+            <span class="dash">-</span> 25% <span class="disc">discount</span>
+          </p>
+        </div>
+        <div class="line">&nbsp;</div>
+
+        <div class="bottom__row">
+          <ul class="advantages">
+            <li>
+              <img src="./images/icon-check.svg" alt="icon-check" />Unlimited
+              websites
+            </li>
+            <li>
+              <img src="./images/icon-check.svg" alt="icon-check" />100% data
+              ownership
+            </li>
+            <li>
+              <img src="./images/icon-check.svg" alt="icon-check" />Email
+              reports
+            </li>
+          </ul>
+          <button class="btn">Start My Trial</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- Simple, traffic-based pricing
+  Sign-up for our 30-day trial. No credit card required. 
+
+  Pageviews
+  $ /month
+
+  Monthly Billing
+  Yearly Billing 25% discount
+
+  Unlimited websites
+  100% data ownership
+  Email reports
+
+  Start my trial -->

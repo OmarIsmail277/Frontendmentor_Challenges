@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  background-color: #fafbff;
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+  padding: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+.title {
+  text-align: center;
+  margin: 3rem 0;
+}
+.title h1 {
+  color: #293356;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+}
+.title p {
+  color: #858fad;
+  font-size: 0.9rem;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem 0.5rem rgba(41, 51, 86, 0.1);
+}
+.card .top__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .top__row--header {
+  display: flex;
+  align-items: center;
+}
+.card .top__row--header .views {
+  text-transform: uppercase;
+  color: #858fad;
+  margin-right: 5rem;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  width: 140px;
+}
+.card .top__row--header .price h1 {
+  color: #293356;
+  margin-right: 0.5rem;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .top__row--header .price span#price-demo {
+  color: inherit;
+  margin-right: 0.5rem;
+}
+.card .top__row--header .price span.per-month {
+  color: #858fad;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.card .slider__row {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  order: 2;
+}
+.card .slider__row input[type=range] {
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 0%, #eaeefb 100%);
+  appearance: none;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  transform: translateY(-5px);
+  width: 100%;
+}
+.card .slider__row input[type=range]::-webkit-slider-thumb {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  width: 45px;
+  height: 45px;
+  padding: 1rem;
+  border-radius: 50%;
+  background: #10d5c2 url("../images/icon-slider.svg") no-repeat center;
+  box-shadow: 0px 5px 10px 0px #10d5c2;
+  transition: all 0.5s;
+}
+.card .toggle__row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.card .toggle__row p {
+  color: #858fad;
+  font-size: 0.75rem;
+  transition: all 0.3s;
+}
+.card .toggle__row .toggle__btn {
+  display: flex;
+  align-items: center;
+}
+.card .toggle__row .toggle__btn #monthly {
+  color: #10d5c2;
+  order: -1;
+}
+.card .toggle__row .toggle__btn > * {
+  margin-right: 0.25rem;
+}
+.card .toggle__row .toggle__btn > *:last-child {
+  margin-right: 0.5rem;
+}
+.card .toggle__row .toggle__btn .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.card .toggle__row .toggle__btn .checkbox:checked + .label .ball {
+  transform: translateX(13px);
+}
+.card .toggle__row .toggle__btn .checkbox:checked ~ #yearly {
+  color: #10d5c2;
+}
+.card .toggle__row .toggle__btn .checkbox:checked ~ #monthly {
+  color: #858fad;
+}
+.card .toggle__row .toggle__btn .label {
+  cursor: pointer;
+  background-color: #cdd7ee;
+  transition: all 0.3s;
+  display: flex;
+  border-radius: 50px;
+  height: 16px;
+  width: 30px;
+  position: relative;
+}
+.card .toggle__row .toggle__btn .label:hover {
+  background-color: #10d5c2;
+}
+.card .toggle__row .toggle__btn .label .ball {
+  height: 70%;
+  width: 35%;
+  position: absolute;
+  top: 15%;
+  left: 2.5px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.25s linear;
+}
+.card .toggle__row .discount {
+  color: #ff8c66;
+  background-color: #feece7;
+  padding: 0.25rem 0.5rem;
+  border-radius: 100px;
+}
+.card .toggle__row .discount .dash {
+  display: none;
+}
+.card .line {
+  height: 1px;
+  width: calc(100% + 6rem);
+  margin-left: -3rem;
+  background-color: #858fad;
+  opacity: 0.2;
+  margin-bottom: 1.5rem;
+}
+.card .bottom__row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.card .bottom__row .advantages {
+  font-size: 0.75rem;
+  color: #858fad;
+}
+.card .bottom__row .advantages li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.card .bottom__row .advantages li img {
+  margin-right: 0.75rem;
+}
+.card .bottom__row .btn {
+  align-self: center;
+  cursor: pointer;
+  border: none;
+  background-color: #293356;
+  color: #bdccff;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+  padding: 0.75rem 3rem;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+.card .bottom__row .btn:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 100% 50%;
+  }
+
+  .title h1 {
+    font-size: 1.5rem;
+  }
+  .title p {
+    max-width: 13rem;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .card .top__row {
+    position: relative;
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  .card .top__row--header {
+    flex-direction: column;
+  }
+  .card .top__row .price h1 {
+    margin-right: 0;
+    text-align: center;
+  }
+  .card .top__row .views {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 5.5rem;
+  }
+  .card .slider__row {
+    margin-bottom: 2rem;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+  }
+  .card .toggle__row {
+    order: 3;
+  }
+  .card .toggle__row .discount {
+    display: flex;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.4rem;
+  }
+  .card .toggle__row .discount .dash {
+    display: block;
+    margin-right: 0.05rem;
+  }
+  .card .toggle__row .discount .disc {
+    display: none;
+  }
+  .card .line {
+    order: 4;
+  }
+  .card .bottom__row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 5;
+  }
+  .card .bottom__row .advantages {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    height: unset;
+  }
+
+  .title {
+    margin: 2rem 0;
+  }
+  .title h1 {
+    font-size: 1.1rem;
+  }
+  .title p {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+  .card .top__row .price h1 #price-demo {
+    font-size: 1.3rem;
+  }
+  .card .top__row .price h1 .per-month {
+    font-size: 0.9rem;
+  }
+  .card .toggle__row {
+    margin-bottom: 1rem;
+  }
+  .card .toggle__row p {
+    color: #858fad;
+    font-size: 0.45rem;
+    transition: all 0.3s;
+    width: fit-content;
+  }
+  .card .line {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
