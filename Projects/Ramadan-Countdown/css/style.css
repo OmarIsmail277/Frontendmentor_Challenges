@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Almarai", sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.container {
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e9e9e9;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  background: url("../images/bg-pattern.svg");
+}
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(closest-side, rgba(5, 119, 103, 0.85), rgba(3, 73, 73, 0.95));
+}
+.container__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: #fff;
+  z-index: 1;
+}
+.container__text {
+  font-size: 32px;
+  font-weight: 700;
+  margin: calc($default-padding * 3) 0 15px;
+}
+.container__specialWord {
+  color: #ebc882;
+  text-shadow: 2px 2px 5px currentColor;
+}
+.container__remaining {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+.container__remainingTime {
+  font-weight: 300;
+  margin-left: 1rem;
+  font-size: 65px;
+  color: #ebc882;
+}
+.container__textFrom {
+  display: none;
+}
+.container--duringRamadan .container__textTo {
+  display: none;
+}
+.container--duringRamadan .container__textFrom {
+  display: inline-block;
+}
+.container__moon {
+  z-index: 1;
+}
+.container__shapes {
+  display: flex;
+}
+.container__shape:nth-child(1) {
+  transform: translate(25px, -55px) scale(0.85);
+}
+.container__shape:nth-child(1) .container__shapeImg {
+  animation-delay: 0.1s;
+}
+.container__shape:nth-child(2) {
+  transform: translate(0, -3px) scale(1);
+}
+.container__shape:nth-child(2) .container__shapeImg {
+  animation-delay: 0.3s;
+}
+.container__shape:nth-child(3) {
+  transform: translate(-20px, -60px) scale(0.8);
+}
+.container__shape:nth-child(3) .container__shapeImg {
+  animation-delay: 0.5s;
+}
+.container__shapeImg {
+  animation: spin 1s infinite alternate ease-in-out;
+  animation-delay: 0.15s;
+  transform-origin: top;
+}
+.container__stars {
+  position: absolute;
+  display: flex;
+}
+.container__star {
+  animation: fade 1s infinite alternate ease-in-out;
+}
+.container__star:nth-child(1) {
+  transform: translate(35px, -10px);
+}
+.container__star:nth-child(2) {
+  transform: translate(70px, 25px) scale(0.85);
+}
+.container__star:nth-child(3) {
+  transform: translate(23px, 15px) scale(0.8);
+}
+.container__star:nth-child(4) {
+  transform: translate(30px, 50px);
+}
+.container__star:nth-child(5) {
+  transform: translate(0, 15px) scale(0.7);
+}
+.container__star:nth-child(6) {
+  transform: translate(20px, 50px) scale(0.85);
+}
+.container__star:nth-child(7) {
+  transform: translate(-40px, 30px) scale(0.9);
+}
+.container__star:nth-child(8) {
+  transform: translate(0, -10px);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

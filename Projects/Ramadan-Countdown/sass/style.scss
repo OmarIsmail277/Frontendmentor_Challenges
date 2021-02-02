@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap");
+
+// Variables
+
+$default-padding: 15px;
+$color-white: #fff;
+$color-bg: #e9e9e9;
+$font-size-normal: 16px;
+$font-size-medium: 20px;
+$font-size-large: 32px;
+$font-size-xlarge: 45px;
+$font-size-xxlarge: 65px;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Almarai", sans-serif;
+  box-sizing: border-box;
+  font-weight: $font-weight-normal;
+}
+
+.container {
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-bg;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    background: url("../images/bg-pattern.svg");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      closest-side,
+      rgba(5, 119, 103, 0.85),
+      rgba(3, 73, 73, 0.95)
+    );
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $default-padding;
+    color: $color-white;
+    z-index: 1;
+  }
+
+  &__text {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    margin: calc($default-padding * 3) 0 $default-padding;
+  }
+
+  &__specialWord {
+    color: #ebc882;
+    text-shadow: 2px 2px 5px currentColor;
+  }
+
+  &__remaining {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+  }
+
+  &__remainingTime {
+    font-weight: $font-weight-light;
+    margin-left: 1rem;
+    font-size: $font-size-xxlarge;
+    color: #ebc882;
+  }
+
+  &__textFrom {
+    display: none;
+  }
+
+  &--duringRamadan &__textTo {
+    display: none;
+  }
+
+  &--duringRamadan &__textFrom {
+    display: inline-block;
+  }
+
+  &__moon {
+    z-index: 1;
+  }
+
+  &__shapes {
+    display: flex;
+  }
+
+  &__shape {
+    &:nth-child(1) {
+      transform: translate(25px, -55px) scale(0.85);
+      .container__shapeImg {
+        animation-delay: 0.1s;
+      }
+    }
+    &:nth-child(2) {
+      transform: translate(0, -3px) scale(1);
+      .container__shapeImg {
+        animation-delay: 0.3s;
+      }
+    }
+    &:nth-child(3) {
+      transform: translate(-20px, -60px) scale(0.8);
+      .container__shapeImg {
+        animation-delay: 0.5s;
+      }
+    }
+  }
+
+  &__shapeImg {
+    animation: spin 1s infinite alternate ease-in-out;
+    animation-delay: 0.15s;
+    transform-origin: top;
+  }
+
+  &__stars {
+    position: absolute;
+    display: flex;
+  }
+
+  &__star {
+    animation: fade 1s infinite alternate ease-in-out;
+
+    &:nth-child(1) {
+      transform: translate(35px, -10px);
+    }
+
+    &:nth-child(2) {
+      transform: translate(70px, 25px) scale(0.85);
+    }
+
+    &:nth-child(3) {
+      transform: translate(23px, 15px) scale(0.8);
+    }
+
+    &:nth-child(4) {
+      transform: translate(30px, 50px);
+    }
+
+    &:nth-child(5) {
+      transform: translate(0, 15px) scale(0.7);
+    }
+
+    &:nth-child(6) {
+      transform: translate(20px, 50px) scale(0.85);
+    }
+
+    &:nth-child(7) {
+      transform: translate(-40px, 30px) scale(0.9);
+    }
+
+    &:nth-child(8) {
+      transform: translate(0, -10px);
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
