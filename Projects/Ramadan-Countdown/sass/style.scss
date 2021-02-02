@@ -204,3 +204,11 @@ body {
     transform: rotate(3deg);
   }
 }
+
+@media (max-width: 600px) {
+  .container {
+    & > * {
+      transform: scale(0.85);
+    }
+  }
+}
