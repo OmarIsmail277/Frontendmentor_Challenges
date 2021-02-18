@@ -27,6 +27,28 @@ body {
   background-attachment: fixed;
   background-color: #130f40;
 }
+body #star {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 5rem;
+  animation: spin 3s infinite alternate ease-in-out;
+  opacity: 0.5;
+}
+body #star:nth-child(1) {
+  left: 5rem;
+}
+body #star:nth-child(2) {
+  right: 5rem;
+}
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .border-gradient {
   border-bottom: 5px solid;
@@ -65,6 +87,15 @@ body {
   height: 35px;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
+}
+.header .container p.cite {
+  margin-top: 0.5rem;
+}
+.header .container p.cite a {
+  text-decoration: none;
+}
+.header .container p.cite a:hover {
+  text-decoration: underline;
 }
 
 .gallery .container {
@@ -173,6 +204,16 @@ body {
   }
   body h1 {
     font-size: 40px !important;
+  }
+  body #star {
+    height: 50px !important;
+    width: 50px;
+  }
+  body #star:nth-child(1) {
+    left: 1rem;
+  }
+  body #star:nth-child(2) {
+    right: 1rem;
   }
 
   .header .container p img {

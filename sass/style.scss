@@ -35,8 +35,36 @@ body {
   background-image: url(/Projects/Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
+
   // url(/Projects/Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
   background-color: #130f40;
+
+  #star {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 5rem;
+    // left: 5rem;
+    animation: spin 3s infinite alternate ease-in-out;
+    opacity: 0.5;
+
+    &:nth-child(1) {
+      left: 5rem;
+    }
+    &:nth-child(2) {
+      right: 5rem;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(-360deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
 }
 
 .border-gradient {
@@ -76,6 +104,15 @@ body {
         height: 35px;
         margin-right: 0.5rem;
         margin-left: 0.5rem;
+      }
+    }
+    p.cite {
+      margin-top: 0.5rem;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -211,6 +248,17 @@ body {
     font-size: 12px;
     h1 {
       font-size: 40px !important;
+    }
+
+    #star {
+      height: 50px !important;
+      width: 50px;
+      &:nth-child(1) {
+        left: 1rem;
+      }
+      &:nth-child(2) {
+        right: 1rem;
+      }
     }
   }
 
