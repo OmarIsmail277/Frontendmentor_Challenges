@@ -32,22 +32,12 @@ body #star {
   width: 100px;
   position: absolute;
   top: 5rem;
-  animation: spin 3s infinite alternate ease-in-out;
-  opacity: 0.5;
 }
 body #star:nth-child(1) {
   left: 5rem;
 }
 body #star:nth-child(2) {
   right: 5rem;
-}
-@keyframes spin {
-  from {
-    transform: rotate(-360deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .border-gradient {
@@ -90,6 +80,17 @@ body #star:nth-child(2) {
 }
 .header .container p.cite {
   margin-top: 0.5rem;
+  font-size: 0.76rem;
+}
+.header .container p.cite .fm {
+  width: unset;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid aqua;
+  transition: all 0.3s;
+}
+.header .container p.cite .fm:hover {
+  transform: scale(1.1);
 }
 .header .container p.cite a {
   text-decoration: none;
@@ -122,6 +123,19 @@ body #star:nth-child(2) {
   height: 60%;
   width: 100%;
   position: relative;
+}
+.gallery .container .project-window .project-image .fm {
+  position: absolute;
+  width: unset;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid aqua;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100000;
+}
+.gallery .container .project-window .project-image .fm:hover {
+  transform: unset;
 }
 .gallery .container .project-window .project-image img {
   cursor: pointer;
@@ -158,12 +172,12 @@ body #star:nth-child(2) {
 .gallery .container .project-window .content .links a {
   display: inline-block;
 }
-.gallery .container .project-window .content .links img {
+.gallery .container .project-window .content .links .link img {
   width: 35px;
   margin-right: 1rem;
   transition: all 0.3s;
 }
-.gallery .container .project-window .content .links img:hover {
+.gallery .container .project-window .content .links .link img:hover {
   transform: scale(1.1);
 }
 
@@ -229,6 +243,14 @@ body #star:nth-child(2) {
   .gallery .container .project-window {
     width: 70%;
     height: 300px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
   }
 }
 

@@ -45,24 +45,14 @@ body {
     position: absolute;
     top: 5rem;
     // left: 5rem;
-    animation: spin 3s infinite alternate ease-in-out;
-    opacity: 0.5;
+    // animation: spin 1s infinite alternate ease-in-out;
+    // opacity: 0.5;
 
     &:nth-child(1) {
       left: 5rem;
     }
     &:nth-child(2) {
       right: 5rem;
-    }
-
-    @keyframes spin {
-      from {
-        transform: rotate(-360deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
     }
   }
 }
@@ -108,6 +98,18 @@ body {
     }
     p.cite {
       margin-top: 0.5rem;
+      font-size: 0.76rem;
+      .fm {
+        width: unset;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid aqua;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
       a {
         text-decoration: none;
         &:hover {
@@ -146,6 +148,22 @@ body {
         height: 60%;
         width: 100%;
         position: relative;
+
+        .fm {
+          position: absolute;
+          width: unset;
+          height: 50px;
+          border-radius: 50%;
+          border: 3px solid aqua;
+          left: 1rem;
+          top: 1rem;
+          // animation: spin 1s infinite alternate ease-in-out;
+          z-index: 100000;
+
+          &:hover {
+            transform: unset;
+          }
+        }
 
         img {
           cursor: pointer;
@@ -186,12 +204,15 @@ body {
           a {
             display: inline-block;
           }
-          img {
-            width: 35px;
-            margin-right: 1rem;
-            transition: all 0.3s;
-            &:hover {
-              transform: scale(1.1);
+
+          .link {
+            img {
+              width: 35px;
+              margin-right: 1rem;
+              transition: all 0.3s;
+              &:hover {
+                transform: scale(1.1);
+              }
             }
           }
         }
@@ -282,5 +303,15 @@ body {
         height: 300px;
       }
     }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
   }
 }
