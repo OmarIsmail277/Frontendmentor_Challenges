@@ -1,0 +1,45 @@
+1-We could, of course, use media queries to adapt
+
+in that situation, but it's far easier
+
+to think responsive right from the beginning
+
+and size the rows and the columns in a responsive
+
+and flexible way right from the start, okay?
+
+So always, always think about that when you're designing
+
+and building content with CSS Grids.
+
+2-@supports
+
+display: grid
+
+and then let's basically reset these properties.
+
+Now we don't have to do it for all of them
+
+because certain things are actually ignored
+
+by grid containers and grid items.
+
+And the same applies to flex containers and flex items.
+
+So what gets ignored by CSS Grid and Flexbox,
+
+are floats, display, inline-block, display:table-cell,
+
+and vertical-align altogether, okay?
+
+So this float here, we don't have to reset it
+
+because it's actually ignored
+
+now that this feature here is a grid item.
+
+So all we have to do is to reset this width here,
+
+set it to auto,
+
+and the margin-bottom, we also need to get rid of that.

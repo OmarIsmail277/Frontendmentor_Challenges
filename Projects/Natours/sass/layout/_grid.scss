@@ -1,0 +1,117 @@
+.row {
+  max-width: $grid-width;
+  // background-color: #eee;
+  /* to center block element inside another block element */
+  margin: 0 auto;
+  /* margin-bottom: 80px; */
+
+  /* another solution other than last-child solution */
+  &:not(:last-child) {
+    /* give margin-bottom:80px to all children except the last-child */
+    margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
+  @include clearfix;
+
+  // ^ start with col-
+  // * contain col-
+  // $ ends with col-
+  [class^="col-"] {
+    // background-color: #950107;
+    // color: #fff;
+    padding: 1rem 0;
+    float: left;
+    // text-align: center;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      2 * (100% - 2 * #{$gutter-horizontal}) / 3 + #{$gutter-horizontal}
+    );
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
+  }
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
+    );
+  }
+}
+
+/* .row:last-child {
+  margin-bottom: 0;
+} */
+
+/* That's a big difference
+
+between doing native CSS calculations or doing them in Sass
+
+because in Sass, we can also do operations of course
+
+but we cannot do them with multiple units,
+
+so we cannot for example
+
+mix rem with pixels, with percentages.
+
+It's actually pretty logical why it is that way.
+
+It is so because we compile our Sass file
+
+while we're developing the page,
+
+so even before the page is served of course to the user
+
+but this kind of calculation all depends on the layout,
+
+so it has to happen while the website is rendered
+
+using the visual formatting model.
+
+That's when these calculations can occur
+
+because it's only then when CSS and when the browser
+
+knows what the percentage is, what the rem is,
+
+and what all of that stuff is, okay?
+
+So we have to do it using the native calc functions. */

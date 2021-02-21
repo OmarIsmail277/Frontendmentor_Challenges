@@ -1,0 +1,170 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-black, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  //   display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  // -webkit-backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
+  // background-color: rgba(0, 0, 0, 0.3);
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    // -webkit-backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
+    // background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all 0.5s 0.2s;
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+  }
+
+  &__left {
+    width: 33.3333333%;
+    // float: left;
+    display: table-cell;
+    vertical-align: middle;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      // transform: translateX(1%);
+      // height: 50%;
+      @include clearfix;
+    }
+  }
+
+  &__right {
+    // width: 66.66666666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+    // float: left;
+
+    @include respond(tab-port) {
+      padding: 3rem 1.5rem;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+    @include respond(phone) {
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.3rem;
+      }
+      .btn {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 360px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    @include respond(tab-port) {
+      // height: 100px;
+      // width: 100%;
+      display: block;
+      width: 50%;
+      float: left;
+      height: 200px;
+    }
+    @include respond(phone) {
+      height: 120px;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+    -webkit-column-rule: 1px solid $color-grey-light-2;
+    -moz-column-rule: 1px solid $color-grey-light-2;
+    column-rule: 1px solid $color-grey-light-2;
+
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+
+    @include respond(tab-port) {
+      column-count: unset;
+      // font-size: 1.3rem;
+      height: 100px;
+      overflow-y: scroll;
+      border: 1px solid $color-primary;
+      padding: 1rem;
+    }
+  }
+
+  // When the popup is open
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+
+      @include respond(tab-port) {
+        top: 0.5rem;
+        right: 1rem;
+      }
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
