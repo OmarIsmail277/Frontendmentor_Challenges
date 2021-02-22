@@ -39,6 +39,38 @@ body {
   // url(/Projects/Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
   background-color: #130f40;
 
+  .fm-profile {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    text-transform: uppercase;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+
+    padding: 0.3rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+
+    @media (max-width: 768px) {
+      top: 9.5rem;
+      right: 50%;
+      transform: translateX(50%);
+      font-size: 0.65rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 0.55rem;
+    }
+
+    a {
+      color: azure;
+
+      &:hover {
+        color: deeppink;
+      }
+    }
+  }
+
   #star {
     height: 100px;
     width: 100px;
@@ -48,7 +80,7 @@ body {
     // animation: spin 1s infinite alternate ease-in-out;
     // opacity: 0.5;
 
-    &:nth-child(1) {
+    &:first-child {
       left: 5rem;
     }
     &:nth-child(2) {
@@ -99,12 +131,29 @@ body {
     p.cite {
       margin-top: 0.5rem;
       font-size: 0.76rem;
+      display: flex;
+      align-items: center;
+      @media (max-width: 768px) {
+        font-size: 0.55rem;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 0.5rem;
+      }
       .fm {
         width: unset;
         height: 50px;
         border-radius: 50%;
         border: 3px solid aqua;
         transition: all 0.3s;
+
+        @media (max-width: 768px) {
+          height: 35px;
+        }
+        @media (max-width: 600px) {
+          border-width: 1px;
+          height: 20px;
+        }
 
         &:hover {
           transform: scale(1.1);
@@ -272,8 +321,9 @@ body {
     }
 
     #star {
-      height: 50px !important;
-      width: 50px;
+      height: 15px !important;
+      width: 15px;
+      top: 0.5rem;
       &:nth-child(1) {
         left: 1rem;
       }

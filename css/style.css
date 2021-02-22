@@ -27,13 +27,43 @@ body {
   background-attachment: fixed;
   background-color: #130f40;
 }
+body .fm-profile {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  body .fm-profile {
+    top: 9.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 600px) {
+  body .fm-profile {
+    font-size: 0.55rem;
+  }
+}
+body .fm-profile a {
+  color: azure;
+}
+body .fm-profile a:hover {
+  color: deeppink;
+}
 body #star {
   height: 100px;
   width: 100px;
   position: absolute;
   top: 5rem;
 }
-body #star:nth-child(1) {
+body #star:first-child {
   left: 5rem;
 }
 body #star:nth-child(2) {
@@ -81,6 +111,18 @@ body #star:nth-child(2) {
 .header .container p.cite {
   margin-top: 0.5rem;
   font-size: 0.76rem;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header .container p.cite {
+    font-size: 0.55rem;
+  }
+}
+@media (max-width: 600px) {
+  .header .container p.cite {
+    font-size: 0.5rem;
+  }
 }
 .header .container p.cite .fm {
   width: unset;
@@ -88,6 +130,17 @@ body #star:nth-child(2) {
   border-radius: 50%;
   border: 3px solid aqua;
   transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .header .container p.cite .fm {
+    height: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .header .container p.cite .fm {
+    border-width: 1px;
+    height: 20px;
+  }
 }
 .header .container p.cite .fm:hover {
   transform: scale(1.1);
@@ -220,8 +273,9 @@ body #star:nth-child(2) {
     font-size: 40px !important;
   }
   body #star {
-    height: 50px !important;
-    width: 50px;
+    height: 15px !important;
+    width: 15px;
+    top: 0.5rem;
   }
   body #star:nth-child(1) {
     left: 1rem;
