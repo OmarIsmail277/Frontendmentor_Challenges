@@ -35,8 +35,8 @@
         </div> -->
         <div class="main__title">
           <div class="main__headings">
-            <h1><span class="salam">Salam!</span> I'm Omar Ismail.</h1>
-            <h2>Frontend Developer</h2>
+            <h1><span class="salam">Salam!</span> My name is Omar Ismail.</h1>
+            <h2>I'm aiming to be a  Frontend Developer.</h2>
           </div>
           <div class="main__buttons">
             <a target="_blank" class="mywork-btn" href="https://omar-ismail-gallery.netlify.app/">My Work</a>
@@ -235,14 +235,14 @@
           <div class="contact__form">
             <p>Let's talk</p>
             <h2>Contact Me</h2>
-            <form class="form" action="#">
+            <form id="my-form" class="form" action="https://formspree.io/f/xaylrwyw" method="POST">
                 <div class="field" tabindex="1">
                     <label for="fullname">Full Name:<span style="color: red;" class="star">*</span></label>
                     <input name="fullname" type="text" placeholder="e.g. Mohamed Ahmed" required>
                 </div>
                 <div class="field" tabindex="2">
                     <label for="email">Your Email:<span style="color: red;" class="star">*</span></label>
-                    <input type="email" type="text" placeholder="example@example.com" required>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
                 </div>
                 <div class="field" tabindex="3">
                     <label for="message">Your Message:<span style="color: red;" class="star">*</span></label>
@@ -250,6 +250,8 @@
                 </div>
                 <button class="btn" type="submit">Send Message</button>
             </form>
+            <div id="status" class=""></div>
+            <!-- Success! 💨 Form submitted Successfully -->
         </div>
         <div class="contact__picture">
             <img src="./img/forms.svg" alt="">

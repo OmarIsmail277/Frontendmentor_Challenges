@@ -42,7 +42,8 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0984e3;
+  background: linear-gradient(to bottom, #0984e3, #3023ae);
+  border-radius: 50px;
 }
 
 /* Handle on hover */
@@ -151,9 +152,10 @@ a {
 }
 .header .main__title .main__headings h1 {
   font-family: "RocknRoll One", sans-serif;
+  font-size: 2.3rem;
 }
 .header .main__title .main__headings h2 {
-  letter-spacing: 3px;
+  font-size: 1.5rem;
 }
 .header .main__buttons {
   margin-top: 1rem;
@@ -282,6 +284,7 @@ a {
 }
 .skills .container .skills__type span.familiar {
   font-size: 1rem;
+  color: #055694bb;
 }
 .skills .container .skills__grid {
   display: grid;
@@ -385,6 +388,7 @@ a {
 }
 .contact__form .form .field {
   width: 100%;
+  outline: none;
 }
 .contact__form .form .field:not(:last-child) {
   margin-bottom: 1rem;
@@ -399,6 +403,14 @@ a {
 .contact__form .form .field textarea {
   width: 100%;
   padding: 0.5rem;
+  border: #0f0c29ae 1px solid;
+  border-radius: 3px;
+  outline: none;
+}
+.contact__form .form .field input:focus,
+.contact__form .form .field textarea:focus {
+  border-color: #0984e3;
+  border-width: 2px;
 }
 .contact__form .form .field input::placeholder,
 .contact__form .form .field textarea::placeholder {
@@ -440,6 +452,40 @@ a {
 }
 .contact__form .form .btn:hover {
   background-position: -100%;
+}
+.contact__form #status {
+  font-size: 0.9rem;
+  width: 100%;
+  color: #fff;
+  margin-top: 1rem;
+  border-radius: 7px;
+  padding: 10px;
+  text-shadow: 1px 1px 4px #000;
+  letter-spacing: 1px;
+  display: none;
+}
+.contact__form #status.success {
+  display: block;
+  animation: status 4s ease forwards;
+  background-color: #0984e3;
+}
+.contact__form #status.error {
+  background-color: red;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 .contact__picture {
   width: 50%;
