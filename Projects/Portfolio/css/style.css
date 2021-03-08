@@ -16,6 +16,7 @@ html {
 body {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
 }
 
 ul {
@@ -46,7 +47,6 @@ a {
   border-radius: 50px;
 }
 
-/* Handle on hover */
 .container {
   width: 1440px;
   margin: 0 auto;
@@ -78,6 +78,12 @@ a {
 .nav .my-name {
   transition: all 0.3s;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.nav .my-name img {
+  width: 30px;
+  margin-right: 0.5rem;
 }
 .nav .my-name a {
   color: #fff;
@@ -174,8 +180,8 @@ a {
 }
 @media only screen and (max-width: 600px) {
   .header .main__buttons > * {
-    font-size: 0.8rem;
-    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
   }
 }
 .header .main__buttons > *:not(:last-child) {
@@ -466,12 +472,32 @@ a {
 }
 .contact__form #status.success {
   display: block;
-  animation: status 4s ease forwards;
+  animation: status 40s ease forwards;
   background-color: #0984e3;
 }
 .contact__form #status.error {
   background-color: red;
-  animation: status 4s ease forwards;
+  animation: status 40s ease forwards;
+}
+.contact__form .or {
+  border-top: #0984e3 solid 3px;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  padding-bottom: 0;
+  padding: 0.25rem 0;
+}
+@media only screen and (max-width: 660px) {
+  .contact__form .or {
+    font-size: 1.1rem !important;
+  }
+}
+.contact__form .my-email {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 660px) {
+  .contact__form .my-email {
+    font-size: 1.1rem !important;
+  }
 }
 @keyframes status {
   0% {
@@ -508,6 +534,9 @@ a {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+}
+.footer p.copyright span.created {
+  display: block;
 }
 .footer p.copyright a.citation {
   color: #0984e3;
@@ -663,7 +692,7 @@ a {
 }
 @media only screen and (max-width: 660px) and (max-width: 600px) {
   .header .main__title .main__headings h2 {
-    font-size: 1rem !important;
+    font-size: 0.75rem !important;
   }
 }
 @media only screen and (max-width: 660px) {
@@ -674,7 +703,7 @@ a {
 }
 @media only screen and (max-width: 660px) and (max-width: 600px) {
   .header .main__title .main__headings h1 {
-    font-size: 1.4rem !important;
+    font-size: 1.1rem !important;
   }
 }
 @media only screen and (max-width: 660px) {
@@ -785,7 +814,8 @@ a {
   .footer p.copyright {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    line-height: 1.75;
   }
   .footer p.copyright a.citation {
     color: #0984e3;
