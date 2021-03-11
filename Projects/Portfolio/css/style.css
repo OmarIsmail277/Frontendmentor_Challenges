@@ -155,13 +155,18 @@ a {
 .header .main__title .main__headings h1,
 .header .main__title .main__headings h2 {
   text-shadow: 1px 1px 4px #0984e3;
+  backface-visibility: hidden;
 }
 .header .main__title .main__headings h1 {
   font-family: "RocknRoll One", sans-serif;
   font-size: 2.3rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 .header .main__title .main__headings h2 {
   font-size: 1.5rem;
+  animation: moveInRight 1s ease-out;
 }
 .header .main__buttons {
   margin-top: 1rem;
@@ -172,13 +177,22 @@ a {
 .header .main__buttons > * {
   border: 3px solid #0984e3;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.9rem;
   border-radius: 5px;
   color: #fff;
   text-shadow: 1px 1px 4px #0984e3;
   transition: all 0.3s;
+  animation: moveInBottom 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
 @media only screen and (max-width: 600px) {
+  .header .main__buttons > * {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+@media only screen and (max-width: 400px) {
   .header .main__buttons > * {
     font-size: 0.7rem;
     padding: 0.4rem 0.6rem;
@@ -193,6 +207,42 @@ a {
   border-color: #fff;
 }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .about {
   padding: 3rem 0;
 }
@@ -240,6 +290,18 @@ a {
   color: #fff;
   transition: all 0.3s;
   margin-top: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .about .container .about__me-left .my-resume {
+    font-size: 1rem;
+    padding: 0.65rem 0.9rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .about .container .about__me-left .my-resume {
+    font-size: 0.75rem;
+    padding: 0.55rem 0.8rem;
+  }
 }
 .about .container .about__me-left .my-resume:hover {
   background-color: #fff;
@@ -469,6 +531,12 @@ a {
   text-shadow: 1px 1px 4px #000;
   letter-spacing: 1px;
   display: none;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+}
+@media only screen and (max-width: 660px) {
+  .contact__form #status {
+    font-size: 0.8rem;
+  }
 }
 .contact__form #status.success {
   display: block;
@@ -577,6 +645,9 @@ a {
   object-fit: cover;
   transition: all 0.3s;
   overflow: hidden;
+  animation: moveInRight 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
 .footer .main__links a .fm_logo:hover,
 .header .main__links a .fm_logo:hover {
@@ -588,6 +659,9 @@ a {
   height: 50px;
   transition: all 0.3s;
   color: #fff;
+  animation: moveInRight 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
 .footer .main__links a svg:hover,
 .header .main__links a svg:hover {
@@ -606,7 +680,15 @@ a {
     width: 35px;
     height: 35px;
   }
-
+}
+@media only screen and (max-width: 660px) and (max-width: 420px) {
+  .header .main__links a .fm_logo,
+.header .main__links a svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 660px) {
   .nav {
     padding: 1rem 1.5rem;
   }
@@ -690,9 +772,14 @@ a {
     font-size: 1.3rem !important;
   }
 }
-@media only screen and (max-width: 660px) and (max-width: 600px) {
+@media only screen and (max-width: 660px) and (max-width: 420px) {
   .header .main__title .main__headings h2 {
-    font-size: 0.75rem !important;
+    font-size: 1rem !important;
+  }
+}
+@media only screen and (max-width: 660px) and (max-width: 320px) {
+  .header .main__title .main__headings h2 {
+    font-size: 0.8rem !important;
   }
 }
 @media only screen and (max-width: 660px) {
@@ -701,7 +788,12 @@ a {
     margin-bottom: 0.5rem;
   }
 }
-@media only screen and (max-width: 660px) and (max-width: 600px) {
+@media only screen and (max-width: 660px) and (max-width: 420px) {
+  .header .main__title .main__headings h1 {
+    font-size: 1.5rem !important;
+  }
+}
+@media only screen and (max-width: 660px) and (max-width: 320px) {
   .header .main__title .main__headings h1 {
     font-size: 1.1rem !important;
   }

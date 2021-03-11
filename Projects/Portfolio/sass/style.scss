@@ -3,8 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Stick&display=swap");
 
 $primary-color: #0984e3;
-$color-secondary-dark: #ff7730;
-$color-grey-dark-2: #999;
+$bg-color: #ecf0f1;
 
 *,
 *::after,
@@ -182,14 +181,22 @@ a {
       h1,
       h2 {
         text-shadow: 1px 1px 4px $primary-color;
+        backface-visibility: hidden;
       }
       h1 {
         font-family: "RocknRoll One", sans-serif;
         font-size: 2.3rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        // animation-delay: 3s;
+        // animation-iteration-count: 3;
+        animation-timing-function: ease-out;
       }
       h2 {
         // letter-spacing: 3px;
         font-size: 1.5rem;
+        animation: moveInRight 1s ease-out;
+        // animation-delay: 1s;
       }
     }
   }
@@ -202,13 +209,20 @@ a {
     & > * {
       border: 3px solid $primary-color;
       display: inline-block;
-      padding: 0.75rem 1rem;
+      padding: 0.6rem 0.9rem;
       border-radius: 5px;
       color: #fff;
       text-shadow: 1px 1px 4px $primary-color;
       transition: all 0.3s;
+      animation: moveInBottom 1s ease-out;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
 
       @media only screen and (max-width: 600px) {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+      }
+      @media only screen and (max-width: 400px) {
         font-size: 0.7rem;
         padding: 0.4rem 0.6rem;
       }
@@ -222,6 +236,51 @@ a {
         border-color: #fff;
       }
     }
+  }
+}
+
+@keyframes moveInLeft {
+  // It is better to animate opacity and transform only for the browser's performance
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -270,6 +329,15 @@ a {
           color: #fff;
           transition: all 0.3s;
           margin-top: 1rem;
+          @media only screen and (max-width: 600px) {
+            font-size: 1rem;
+            padding: 0.65rem 0.9rem;
+          }
+          @media only screen and (max-width: 400px) {
+            font-size: 0.75rem;
+            padding: 0.55rem 0.8rem;
+          }
+
           &:hover {
             background-color: #fff;
             //   border-color: $;
@@ -314,7 +382,7 @@ a {
 
 .skills {
   padding: 3rem 0;
-  background-color: #ecf0f1;
+  background-color: $bg-color;
   .container {
     .skills__heading {
       @extend %heading_style;
@@ -437,7 +505,7 @@ a {
 
 .contact {
   padding: 3rem 0;
-  background-color: #ecf0f1;
+  background-color: $bg-color;
   .container {
     display: flex;
     justify-content: space-between;
@@ -532,6 +600,10 @@ a {
       text-shadow: 1px 1px 4px #000;
       letter-spacing: 1px;
       display: none;
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+      @media only screen and (max-width: 660px) {
+        font-size: 0.8rem;
+      }
 
       &.success {
         display: block;
@@ -642,6 +714,11 @@ a {
       object-fit: cover;
       transition: all 0.3s;
       overflow: hidden;
+
+      animation: moveInRight 1s ease-out;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
+
       &:hover {
         border-color: $primary-color;
       }
@@ -652,6 +729,11 @@ a {
       height: 50px;
       transition: all 0.3s;
       color: #fff;
+
+      animation: moveInRight 1s ease-out;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
+
       //   #0077B7
       //   #212121
       &:hover {
@@ -673,6 +755,18 @@ a {
       svg {
         width: 35px;
         height: 35px;
+      }
+    }
+  }
+
+  .header .main__links {
+    @media only screen and (max-width: 420px) {
+      a {
+        .fm_logo,
+        svg {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
@@ -759,15 +853,22 @@ a {
       .main__headings {
         h2 {
           font-size: 1.3rem !important;
-          @media only screen and (max-width: 600px) {
-            font-size: 0.75rem !important;
+
+          @media only screen and (max-width: 420px) {
+            font-size: 1rem !important;
+          }
+          @media only screen and (max-width: 320px) {
+            font-size: 0.8rem !important;
           }
         }
         h1 {
           font-size: 1.75rem !important;
           margin-bottom: 0.5rem;
 
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 420px) {
+            font-size: 1.5rem !important;
+          }
+          @media only screen and (max-width: 320px) {
             font-size: 1.1rem !important;
           }
         }
