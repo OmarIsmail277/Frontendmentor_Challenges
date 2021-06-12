@@ -58,3 +58,45 @@ burger.addEventListener("click", () => {
     xhr.send(data);
   }
 
+// down arrow
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("downArrow").style.display = "block";
+  } else {
+    document.getElementById("downArrow").style.display = "none";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+// var header = document.getElementById("header");
+// var downArrow = document.getElementById('downArrow');
+
+// function fadeOutOnScroll(element, fadedElement) {
+// 	if (!element) {
+// 		return;
+// 	}
+	
+// 	var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+// 	var elementHeight = element.offsetHeight;
+// 	var scrollTop = document.documentElement.scrollTop;
+	
+// 	var opacity = 1;
+	
+// 	if (scrollTop > distanceToTop) {
+// 		opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+// 	}
+	
+// 	if (opacity >= 0) {
+// 		fadedElement.style.opacity = opacity;
+// 	}
+// }
+
+// function scrollHandler() {
+// 	fadeOutOnScroll(header, downArrow);
+// }
+
+// window.addEventListener('scroll', scrollHandler);
