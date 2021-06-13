@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./circle.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Admin Dashboard</title>
+  </head>
+  <body class="">
+    <input type="checkbox" name="" id="sidebar-toggle" />
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar__upper">
+        <div class="upper-flex">
+          <label class="sidebar-toggle-label" for="sidebar-toggle">
+            <span class="fas fa-bars close-sidebar"></span>
+          </label>
+          <figure class="logo__figure">
+            <img src="./img/admin_light.svg" width="35px" alt="admin-photo" />
+          </figure>
+          <div class="upper-icons">
+            <span class="far fa-bell"></span>
+            <span class="far fa-user-circle"></span>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__main">
+        <div class="sidebar__user">
+          <figure class="user__photo">
+            <img src="./img/avatar.svg" alt="user" />
+          </figure>
+          <div class="user__info">
+            <h3 class="user__info--header">Omar Ismail</h3>
+            <span class="user__email">Omar.ismail277@gmail.com</span>
+          </div>
+        </div>
+        <div class="sidebar__menu">
+          <div class="menu__heading">
+            <span>Dashboard</span>
+          </div>
+          <ul class="menu__list">
+            <li>
+              <a href="#">
+                <span class="fas fa-balance-scale-right"></span>Finance
+              </a>
+            </li>
+            <li>
+              <a href="#"> <span class="fas fa-chart-pie"></span>Analytics</a>
+            </li>
+          </ul>
+          <div class="menu__heading">
+            <span>Applications</span>
+          </div>
+          <ul class="menu__list">
+            <li>
+              <a href="#">
+                <span class="far fa-calendar-alt"></span>Calender
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fas fa-shopping-cart"></span>Ecommerce</a
+              >
+            </li>
+            <li>
+              <a href="">
+                <span class="fas fa-envelope"></span>
+                Mailbox
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="fas fa-check-circle"></span>
+                Tasks
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-toggle">
+          <label class="sidebar-toggle-label" for="sidebar-toggle">
+            <span class="fas fa-bars"></span>
+          </label>
+        </div>
+        <div class="header__icons">
+          <div class="toggle-darkmode">
+            <input type="checkbox" id="checkbox" class="checkbox" />
+            <!-- <label for="checkbox" class="toggle-darkmode-label">
+              <div class="ball"></div>
+            </label> -->
+            <label for="checkbox" class="darkmode__text">Turn Dark Mode  <span id="darkmode__state">ON/OFF</span> </label>
+          </div>
+        </div>
+      </header>
+
+      <div class="main__section" class="main__section">
+        <!-- Main Page Header -->
+        <div class="page-header">
+          <div>
+            <h1>User Activity Tracking</h1>
+            <small>
+              Monitor user activities while using their working devices
+              throughout the company network and display some statistics
+            </small>
+          </div>
+          <div class="header-actions">
+            <button class="btn">
+              <span class="fas fa-file-export"></span>
+              <span class="text">Export</span>
+            </button>
+            <button class="btn">
+              <span class="fas fa-tools"></span>
+              <span class="text">Settings</span>
+            </button>
+          </div>
+        </div>
+        <!-- Stats Cards -->
+        <!-- --- -->
+        <!-- Card #1 -->
+        <div class="cards">
+          <div class="card">
+            <div class="card__flex">
+              <div class="card__info">
+                <div class="card__head">
+                  <span>Users</span>
+                  <small>Number of logged in users</small>
+                </div>
+                <h2 id="loggedInUsers"></h2>
+                <small>2% less users</small>
+              </div>
+              <div class="card__chart danger">
+                <span class="fas fa-chart-line"> </span>
+              </div>
+            </div>
+          </div>
+          <!-- Card #2 -->
+          <div class="card">
+            <div class="card__flex">
+              <div class="card__info">
+                <div class="card__head">
+                  <span>Time</span>
+                  <small>Total minutes spent</small>
+                </div>
+                <h2 id="timeSpent"></h2>
+                <small>5% more time</small>
+              </div>
+              <div class="card__chart success">
+                <span class="fas fa-chart-line"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Card #3 -->
+          <div class="card">
+            <div class="card__flex">
+              <div class="card__info">
+                <div class="card__head">
+                  <span>Unique Visitors</span>
+                  <small>Number of visitors</small>
+                </div>
+                <h2>46,085</h2>
+                <small>2% less visitors</small>
+              </div>
+              <div class="card__chart yellow">
+                <span class="fas fa-chart-line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Logged In Users -->
+        <div class="loggedin__users">
+          <p>Currently LoggedIn Users:</p>
+          <span id="logusers"></span>
+        </div>
+        <!-- Analytics -->
+        <div class="analytics-card">
+          <div class="analytics-head">
+            <h2>Applications Stats</h2>
+            <span class="las la-ellipsis-h"></span>
+          </div>
+          <div class="analytics-charts">
+            <div class="analytics-chart">
+              <div class="c100 p90 big">
+                    <span>90%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+              <div class="analytics-note">
+                <small
+                  >Google Apps usage</small
+                >
+              </div>
+            </div>
+            <div class="analytics-chart">
+              <div class="c100 p70 big">
+                    <span>70%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+              <div class="analytics-note">
+                <small
+                  >Microsoft Documents Usage</small
+                >
+              </div>
+            </div>
+          </div>
+  
+            <div class="analytics-btn">
+              <button>Generate report</button>
+            </div>
+          </div>
+        <!-- Jobs Grid -->
+        <div class="jobs">
+          <h2 class="jobs__header">
+            Users
+            <a href="#">See all users <span class="fas fa-arrow-right"></span></a href="#">
+          </h2>
+          <div class="inputs__container">
+            <!-- Search by name -->
+            <input
+              id="search_by_name"
+              class="search_by_name"
+              type="text"
+              placeholder="Search by name"
+            />
+            <!-- Filter by Date -->
+            <div class="filter_by_date">
+              <label for="">From Date</label>
+              <input type="date" name="" max="" id="fromDate" />
+              <label for="">To Date</label>
+              <input type="date" name="" min="" id="toDate" />
+              <button class="btn" id="submitDates">Filter by Date</button>
+            </div>
+            <!-- Filter by Role -->
+            <div id="filter_by_role" class="filter_by_role">
+              <span class="filter__name">Filter by Role</span>
+              <span class="arrow__down">&#9660;</span>
+              <ul id="filter__list" class="filter__list">
+                <li>All</li>
+                <li>Designer</li>
+                <li>Developer</li>
+                <li>Software</li>
+                <li>Manager</li>
+              </ul>
+            </div>
+          </div>
+          <div class="click">Click on down arrows or table header to sort asc/desc</div>
+          <div id="table-responsive"></div>
+        </div>
+      </div>
+      <footer class="footer">All rights reserved 2021</footer>
+    </main>
+    <label for="sidebar-toggle" class="body-label"></label>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./tableManager.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
