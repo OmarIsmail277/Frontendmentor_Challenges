@@ -64,7 +64,7 @@ burger.addEventListener("click", () => {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (currentScrollPos === 0) {
     document.getElementById("downArrow").style.display = "block";
   } else {
     document.getElementById("downArrow").style.display = "none";
