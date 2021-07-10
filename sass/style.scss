@@ -41,25 +41,23 @@ body {
   background-color: #130f40;
   .fm-profile {
     position: absolute;
-    right: 3rem;
+    right: 1rem;
     top: 3rem;
     text-transform: uppercase;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.9rem;
+    font-family: "Potta One", cursive;
+    font-size: 0.75rem;
 
     padding: 0.3rem;
     border-radius: 3px;
     transition: all 0.3s;
 
-    @media (max-width: 768px) {
-      top: 9.5rem;
-      right: 50%;
-      transform: translateX(50%);
-      font-size: 0.65rem;
-    }
-
-    @media (max-width: 600px) {
-      font-size: 0.55rem;
+    @media (max-width: 500px) {
+      // top: 10rem;
+      // right: 50%;
+      // transform: translateX(50%);
+      right: 5px;
+      font-size: 0.5rem;
+      // margin-top: 1.3rem;
     }
 
     a {
@@ -90,12 +88,12 @@ body {
 }
 
 .border-gradient {
-  border-bottom: 5px solid;
+  border-bottom: 10px solid;
   border-image-slice: 1;
-  border-width: 5px;
+  border-width: 10px;
 }
 .border-gradient-purple {
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-source: linear-gradient(to left, rgb(76, 76, 198), #32c5e6);
 }
 
 .header {
@@ -105,13 +103,14 @@ body {
 
     h1 {
       width: fit-content;
+      display: table;
       margin: 0 auto;
       padding-bottom: 0.3rem;
       margin-bottom: 1rem;
-      font-family: "Langar", cursive;
+      font-family: "Potta One", cursive;
       font-weight: normal;
       letter-spacing: 1px;
-      font-size: 60px;
+      font-size: 55px;
       -webkit-animation: glow 1s ease-in-out infinite alternate;
       -moz-animation: glow 1s ease-in-out infinite alternate;
       animation: glow 1s ease-in-out infinite alternate;
@@ -129,17 +128,21 @@ body {
       }
     }
     p.cite {
+      font-size: 0.9rem;
+      width: fit-content;
+      font-family: "Potta One", cursive;
+      display: table;
+      margin: 0 auto;
       margin-top: 0.5rem;
-      font-size: 0.76rem;
-      display: flex;
-      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      color: #130f40;
+      background-color: aliceblue;
+
       @media (max-width: 768px) {
-        font-size: 0.55rem;
+        font-size: 0.75rem;
       }
 
-      @media (max-width: 600px) {
-        font-size: 0.5rem;
-      }
       .fm {
         width: unset;
         height: 50px;
@@ -295,21 +298,26 @@ body {
       padding: 0.35rem 0.75rem;
       display: flex;
       border-radius: 50px;
+      color: #00b4db;
+      color: #130f40;
 
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-        0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      // text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      //   0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      -webkit-animation: glow 0.5s ease-in-out infinite alternate;
+      -moz-animation: glow 0.5s ease-in-out infinite alternate;
+      animation: glow 0.5s ease-in-out infinite alternate;
     }
   }
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00b4db,
+      0 0 40px #00b4db, 0 0 50px #00b4db, 0 0 60px #00b4db, 0 0 70px #00b4db;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px #fff, 0 0 30px #130f40, 0 0 40px #130f40,
+      0 0 50px #130f40, 0 0 60px #130f40, 0 0 70px #130f40, 0 0 80px #130f40;
   }
 }
 
@@ -317,7 +325,7 @@ body {
   body {
     font-size: 12px;
     h1 {
-      font-size: 40px !important;
+      font-size: 30px !important;
     }
 
     #star {
