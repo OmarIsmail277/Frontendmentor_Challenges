@@ -39,29 +39,52 @@ body {
 
   // url(/Projects/Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
   background-color: #130f40;
+
+  // Back button
+  .back-btn {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    font-family: "Potta One", cursive;
+    font-size: 1.75rem;
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+    }
+
+    a {
+      color: #fff;
+      transition: all 0.3s;
+      text-decoration: none;
+      &:hover {
+        color: #00b4db;
+      }
+    }
+  }
   .fm-profile {
     position: absolute;
     right: 1rem;
     top: 3rem;
     text-transform: uppercase;
     font-family: "Potta One", cursive;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
 
     padding: 0.3rem;
     border-radius: 3px;
-    transition: all 0.3s;
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       // top: 10rem;
       // right: 50%;
       // transform: translateX(50%);
-      right: 5px;
+      right: -20px;
       font-size: 0.5rem;
+      transform: rotate(90deg);
+
       // margin-top: 1.3rem;
     }
 
     a {
       color: azure;
+      transition: all 0.3s;
 
       &:hover {
         color: deeppink;
@@ -284,6 +307,7 @@ body {
       right: 5px;
       top: 5px;
       z-index: 100;
+      color: #fff;
       background: #f953c6; /* fallback for old browsers */
       background: -webkit-linear-gradient(
         to right,
@@ -298,8 +322,8 @@ body {
       padding: 0.35rem 0.75rem;
       display: flex;
       border-radius: 50px;
-      color: #00b4db;
-      color: #130f40;
+      // color: #00b4db;
+      // color: #130f40;
 
       // text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
       //   0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;

@@ -26,25 +26,46 @@ body {
   background-attachment: fixed;
   background-color: #130f40;
 }
+body .back-btn {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  font-family: "Potta One", cursive;
+  font-size: 1.75rem;
+}
+@media (max-width: 600px) {
+  body .back-btn {
+    font-size: 1.3rem;
+  }
+}
+body .back-btn a {
+  color: #fff;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+body .back-btn a:hover {
+  color: #00b4db;
+}
 body .fm-profile {
   position: absolute;
   right: 1rem;
   top: 3rem;
   text-transform: uppercase;
   font-family: "Potta One", cursive;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   padding: 0.3rem;
   border-radius: 3px;
-  transition: all 0.3s;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body .fm-profile {
-    right: 5px;
+    right: -20px;
     font-size: 0.5rem;
+    transform: rotate(90deg);
   }
 }
 body .fm-profile a {
   color: azure;
+  transition: all 0.3s;
 }
 body .fm-profile a:hover {
   color: deeppink;
@@ -239,6 +260,7 @@ body #star:nth-child(2) {
   right: 5px;
   top: 5px;
   z-index: 100;
+  color: #fff;
   background: #f953c6;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #b91d73, #f953c6);
@@ -248,8 +270,6 @@ body #star:nth-child(2) {
   padding: 0.35rem 0.75rem;
   display: flex;
   border-radius: 50px;
-  color: #00b4db;
-  color: #130f40;
   -webkit-animation: glow 0.5s ease-in-out infinite alternate;
   -moz-animation: glow 0.5s ease-in-out infinite alternate;
   animation: glow 0.5s ease-in-out infinite alternate;
