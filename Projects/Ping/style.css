@@ -1,165 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
 :root {
-    /* ### Primary */
---Blue: #4F7DF3;
+  /* ### Primary */
+  --Blue: #4f7df3;
 
-/* ### Secondary */
+  /* ### Secondary */
 
---Pale-Blue: #C2D3FF;
---Light-Red: #FF5263;
+  --Pale-Blue: #c2d3ff;
+  --Light-Red: #ff5263;
 
-/* ### Neutral */
+  /* ### Neutral */
 
---Gray: #969696;
---Very-Dark-Blue: #151F29;
+  --Gray: #969696;
+  --Very-Dark-Blue: #151f29;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 20px;
-    color: var(--Very-Dark-Blue);
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  color: var(--Very-Dark-Blue);
 }
 
 .container {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .ping {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .launching {
-    margin-bottom: 30px;
-    color: var(--Gray);
-    font-weight: 300;
+  margin-bottom: 30px;
+  color: var(--Gray);
+  font-weight: 300;
 }
 .soon {
-    color: var(--Very-Dark-Blue);
-    font-weight: 700;
+  color: var(--Very-Dark-Blue);
+  font-weight: 700;
 }
 .subscribe {
-    font-size: 16px;
-    margin-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    margin-bottom: 80px;
-    max-width: 400px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 80px;
+  max-width: 400px;
+  position: relative;
 }
 
 input {
-    width: 100%;
-    border-radius: 50px;
-    padding: 15px 25px;
-    outline: none;
-    border: 2px solid var(--Pale-Blue);
-    font-family: 'Libre Franklin', sans-serif;
-    color: var(--Very-Dark-Blue);
+  width: 100%;
+  border-radius: 50px;
+  padding: 15px 25px;
+  outline: none;
+  border: 2px solid var(--Pale-Blue);
+  font-family: "Libre Franklin", sans-serif;
+  color: var(--Very-Dark-Blue);
 }
 
 input::placeholder {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 button {
-    cursor: pointer;
-    width: 100%;
-    border-radius: 50px;
-    padding: 15px 20px;
-    outline: none;
-    border: none;
-    background-color: var(--Blue);
-    color: white;
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: all 0.25s;
-    margin-top: 10px;
-    box-shadow: 0px 5px 5px 0px #4f7df394;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 50px;
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  background-color: var(--Blue);
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.25s;
+  margin-top: 10px;
+  box-shadow: 0px 5px 5px 0px #4f7df394;
 }
 button:hover {
-    transform: scale(1.1);
-    background-color: var(--Very-Dark-Blue);
-    box-shadow: 0px 5px 5px 0px #151f29ac;
-
+  transform: scale(1.1);
+  background-color: var(--Very-Dark-Blue);
+  box-shadow: 0px 5px 5px 0px #151f29ac;
 }
 
 .dashboard {
-    height: 100%;
-    width: 70%;
-    margin-bottom: 150px;
-    max-width: 450px;
+  height: 100%;
+  width: 70%;
+  margin-bottom: 150px;
+  max-width: 450px;
 }
- ul {
-     list-style: none;
-     display: flex;
-     margin-bottom: 30px;
-     /* justify-content: center;
+ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 30px;
+  /* justify-content: center;
      align-items: center; */
- }
+}
 
 ul a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul li a {
-    color: var(--Blue);
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
+  color: var(--Blue);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
 }
 ul li {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 ul li:last-child {
-    margin: 0;
+  margin: 0;
 }
 
 ul li a:hover {
-    color: white;
-    background-color: var(--Blue);
+  color: white;
+  background-color: var(--Blue);
 }
 
 .copyright {
-    font-size: 13px;
-    color: var(--Very-Dark-Blue);
-    opacity: 0.6;
+  font-size: 13px;
+  color: var(--Very-Dark-Blue);
+  opacity: 0.6;
 }
 
 .error-message {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--Light-Red);
-    margin-bottom: 20px;
-    margin-top: 10px;
-    display: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--Light-Red);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: none;
 }
 
 .error {
-    border: 2px solid var(--Light-Red);
+  border: 2px solid var(--Light-Red);
 }
 /* .error-1 input {
     border: 10px solid seagreen;
@@ -167,41 +166,36 @@ ul li a:hover {
 
 /* Desktop Design */
 
-@media only screen and (min-width:768px) {
-    form {
-        display: flex;
-        flex-direction: row;
-        width: 35%;
-        max-width: 600px;
-        min-width: 500px;
-    }
-    button {
-        margin-top: 0;
-        width: 35%;
-    }
-    input {
-        width: 70%;
-        margin-right: 20px;
-    }
+@media only screen and (min-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    max-width: 600px;
+    min-width: 500px;
+  }
+  button {
+    margin-top: 0;
+    width: 35%;
+  }
+  input {
+    width: 70%;
+    margin-right: 20px;
+  }
 
-    .dashboard {
-        width: 35%;
-        max-width: 600px;
-        min-width: 500px;
-    }
+  .dashboard {
+    width: 35%;
+    max-width: 600px;
+    min-width: 500px;
+  }
 
-    .error-message {
-        position: absolute;
-        top: 50px;
-        left: 20px;
-    }
+  .error-message {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+  }
 
-    .launching {
-        margin-bottom: 15px;
-    }
-
-
-  
-
+  .launching {
+    margin-bottom: 15px;
+  }
 }
-

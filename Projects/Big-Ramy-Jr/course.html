@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <title>Big Ramy Jr</title>
+  </head>
+  <body>
+    <div class="upper-bar">
+      <div class="container">
+        <div class="lang"><a href="#" class="link">العربية</a></div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="./dist/images/logo.svg" alt="logo" />
+        </div>
+        <div class="search-bar">
+          <div class="search_box">
+            <input
+              type="text"
+              class="input"
+              placeholder="What your are Looking for?"
+            />
+            <div class="search_btn">
+              <img
+                src="./dist/images/search (4).svg"
+                class="magnifier-img"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="sign"><a href="#">Sign-in or signup</a></div>
+
+        <div class="notif">
+          <a href="#" class="notif-link"
+            ><img src="./dist/images/notification.svg" alt=""
+          /></a>
+          <div id="number">2</div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="container">
+        <ul class="menu">
+          <li><a href="/index.html">Home</a></li>
+          <li>
+            <a href="#"
+              >News <img src="./dist/images/Back Copy.svg" alt=""
+            /></a>
+          </li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">E-books</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <div class="cart">
+          <a href="#" class="cart-link">
+            <img class="cart-img" src="./dist/images/add-to-cart.svg" alt="" />
+          </a>
+          <span><a href="#">Cart</a></span>
+          <div id="number">2</div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="course-section">
+      <div class="container">
+        <div class="course-info">
+          <div class="course-details">
+            <h2 class="course-name">The Basic Rules of Booty Camp Course</h2>
+            <div class="course-rating">
+              <div class="stars-rating">
+                <img src="./dist/images/red_start.svg" alt="" />
+                <img src="./dist/images/red_start.svg" alt="" />
+                <img src="./dist/images/red_start.svg" alt="" />
+                <img src="./dist/images/red_start.svg" alt="" />
+                <img src="./dist/images/red_start.svg" alt="" />
+              </div>
+              <div class="num_of_subs">(3,500)</div>
+            </div>
+          </div>
+          <div class="course-actions">
+            <p class="price"><span>S.R</span> 2400</p>
+            <div class="pay-btns">
+              <button class="pay-button">Pay</button>
+              <button class="add-to-cart-button">
+                <img src="./dist/images/red_cart.svg" alt="cart" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-hero">
+          <img src="./dist/images/course-hero.png" alt="course-hero-img" />
+          <div class="play-btn">
+            <img src="./dist/images/play.svg" alt="play" />
+          </div>
+        </div>
+
+        <div class="course-tabs">
+          <div class="tabs">
+            <button class="tab-button active" onclick="showTab('about', this)">
+              About
+            </button>
+            <button class="tab-button" onclick="showTab('content', this)">
+              Content
+            </button>
+            <button class="tab-button" onclick="showTab('instructors', this)">
+              Instructors
+            </button>
+          </div>
+
+          <div id="about" class="tab-content">
+            <div class="price"><span>S.R</span> 2400</div>
+            <div class="level">
+              <h2>Level</h2>
+              <cite>Beginner</cite>
+            </div>
+            <div class="desc">
+              <h2>DESCRIPTION</h2>
+              <cite>
+                The preservation of human life is the ultimate value, a pillar
+                of ethics and the foundation of all morality. This held true in
+                most cultures and societies throughout history.
+              </cite>
+              <br />
+              <cite>
+                On first impression, the last sentence sounds patently wrong. We
+                all know about human collectives that regarded human lives as
+                dispensable, that murdered and tortured, that cleansed and
+                annihilated whole populations in recurrent genocides. Surely,
+                these defy the aforementioned statement
+              </cite>
+            </div>
+
+            <div class="course-cards">
+              <div class="card">
+                <h2>
+                  <img src="./dist/images/sand-clock.svg" alt="" /> Duration
+                </h2>
+                <p class="info">8 sessions (4 hours)</p>
+              </div>
+              <div class="card">
+                <h2>
+                  <img src="./dist/images/rocket.svg" alt="" /> Start Date
+                </h2>
+                <p class="info">20/01/2020</p>
+              </div>
+              <div class="card">
+                <h2>
+                  <img src="./dist/images/sessions.svg" alt="" /> Sessions
+                </h2>
+                <p class="info lastp">
+                  <span class="num_of_vids">4 Video / week</span>
+                  <span class="vid_dur">20 minutes / video </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="content" class="tab-content" style="display: none">
+            <div class="course-content">
+              <h2>Content</h2>
+              <div class="weeks">
+                <div class="week">
+                  <div class="week-num">Week 1</div>
+
+                  <div class="week-content">
+                    <div class="section">
+                      <p class="title">Understanding Operating Systems</p>
+                      <img src="./dist/images/red_arrow.svg" alt="🔻" />
+                    </div>
+
+                    <div class="hidden-content">
+                      <div class="lecture">
+                        <p class="lecture-title">
+                          <img src="./dist/images/red_playbtn.svg" alt="" />
+                          <span>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing
+                            elitr, sed diam nonumy
+                          </span>
+                        </p>
+                        <div class="lecture-duration">
+                          <span> 20:00 </span>
+                          <img src="./dist/images/lock.svg" alt="🔒" />
+                        </div>
+                      </div>
+                      <div class="lecture">
+                        <p class="lecture-title">
+                          <img src="./dist/images/red_playbtn.svg" alt="" />
+                          <span> sed diam nonumy eirmod temp </span>
+                        </p>
+                        <div class="lecture-duration">
+                          <span> 19:54 </span>
+                          <img src="./dist/images/lock.svg" alt="🔒" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="week">
+                  <div class="week-num">Week 2</div>
+
+                  <div class="week-content">
+                    <div class="section">
+                      <p class="title">WordPress Version 2 0 3 Review</p>
+                      <img
+                        class="red_arrow"
+                        src="./dist/images/red_arrow.svg"
+                        alt="🔻"
+                      />
+                    </div>
+
+                    <div class="hidden-content">
+                      <div class="lecture">
+                        <p class="lecture-title">
+                          <img src="./dist/images/red_playbtn.svg" alt="" />
+                          <span>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing
+                            elitr, sed diam nonumy
+                          </span>
+                        </p>
+                        <div class="lecture-duration">
+                          <span> 20:00 </span>
+                          <img src="./dist/images/lock.svg" alt="🔒" />
+                        </div>
+                      </div>
+                      <div class="lecture">
+                        <p class="lecture-title">
+                          <img src="./dist/images/red_playbtn.svg" alt="" />
+                          <span> sed diam nonumy eirmod temp </span>
+                        </p>
+                        <div class="lecture-duration">
+                          <span> 19:54 </span>
+                          <img src="./dist/images/lock.svg" alt="🔒" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="week">
+                  <div class="week-num">Week 3</div>
+
+                  <div class="week-content">
+                    <div class="section">
+                      <p class="title">Popular Uses Of The Internet</p>
+                      <img src="./dist/images/red_arrow.svg" alt="🔻" />
+                    </div>
+
+                    <div class="hidden-content">
+                      <div class="lecture">
+                        <p class="lecture-title">
+                          <img src="./dist/images/red_playbtn.svg" alt="" />
+                          <span>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing
+                            elitr, sed diam nonumy
+                          </span>
+                        </p>
+                        <div class="lecture-duration">
+                          <span> 20:00 </span>
+                          <img src="./dist/images/lock.svg" alt="🔒" />
+                        </div>
+                      </div>
+                      <div class="lecture">
+                        <p class="lecture-title">
+                          <img src="./dist/images/red_playbtn.svg" alt="" />
+                          <span> sed diam nonumy eirmod temp </span>
+                        </p>
+                        <div class="lecture-duration">
+                          <span> 19:54 </span>
+                          <img src="./dist/images/lock.svg" alt="🔒" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="instructors" class="tab-content" style="display: none">
+            <h2>Instructors</h2>
+
+            <div class="instrs">
+              <div class="instr first_instr">
+                <img class="photo" src="./dist/images/coach1.jpg" alt="" />
+                <div class="name">Garret Wallace</div>
+                <div class="red-border"></div>
+                <div class="job">Fitness coach</div>
+              </div>
+              <div class="instr">
+                <img class="photo" src="./dist/images/coach2.jpg" alt="" />
+                <div class="name">Nathaniel Moore</div>
+                <div class="red-border"></div>
+                <div class="job">Fitness coach</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="upper-section">
+          <div class="footer-logo">
+            <img src="./dist/images/logo.svg" alt="Logo" />
+          </div>
+
+          <div class="subs-bar">
+            <div class="newsletter">
+              <h3>Join Our <span>Newsletter</span></h3>
+            </div>
+            <div class="subs-box">
+              <input
+                type="text"
+                class="subs_input"
+                placeholder="example@gmail.com"
+              />
+              <button class="subs_btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lower-section">
+          <div class="lower-left">
+            <p class="footer-info">
+              Lorem Ipsum is simply dummy text of the printing and typesett ing
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+            <div class="social-follow">
+              <span>Follow us on</span>
+              <div class="social-plats">
+                <a href="">
+                  <img src="./dist/images/twitter.png" alt="" />
+                </a>
+                <a href="">
+                  <img src="./dist/images/fb.png" alt="" />
+                </a>
+                <a href="">
+                  <img src="./dist/images/Instagram.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lower-right">
+            <ul>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">My Payments</a></li>
+              <li><a href="#">Tournaments</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Orders History</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">My Courses</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Privacy Policies</a></li>
+              <li><a href="#">E-Books</a></li>
+              <li><a href="#">My E-Books</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="inova">
+      <span class="developed-by">Developed by</span>
+      <img src="./dist/images/inova-logo.png" alt="" />
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
