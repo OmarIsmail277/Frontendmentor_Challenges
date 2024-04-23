@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Langar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  height: 100%;
+  background-image: url(/Projects/Intro-Component-With-Signup-Form/images/bg-intro-desktop.png);
+  background-attachment: fixed;
+  background-color: #130f40;
+}
+body .back-btn {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  font-family: "Potta One", cursive;
+  font-size: 1.75rem;
+}
+@media (max-width: 600px) {
+  body .back-btn {
+    font-size: 1.3rem;
+  }
+}
+body .back-btn a {
+  color: #fff;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+body .back-btn a:hover {
+  color: #00b4db;
+}
+body .fm-profile {
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+  text-transform: uppercase;
+  font-family: "Potta One", cursive;
+  font-size: 0.65rem;
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+@media (max-width: 600px) {
+  body .fm-profile {
+    right: -20px;
+    font-size: 0.5rem;
+    transform: rotate(90deg);
+  }
+}
+body .fm-profile a {
+  color: azure;
+  transition: all 0.3s;
+}
+body .fm-profile a:hover {
+  color: deeppink;
+}
+body #star {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 5rem;
+}
+body #star:first-child {
+  left: 5rem;
+}
+body #star:nth-child(2) {
+  right: 5rem;
+}
+
+.border-gradient {
+  border-bottom: 10px solid;
+  border-image-slice: 1;
+  border-width: 10px;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, rgb(76, 76, 198), #32c5e6);
+}
+
+.header .container {
+  text-align: center;
+  padding-top: 1rem;
+}
+.header .container h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-family: "Potta One", cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 55px;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.header .container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .container p img {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.header .container p.cite {
+  font-size: 0.9rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Potta One", cursive;
+  display: table;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: #130f40;
+  background-color: aliceblue;
+}
+@media (max-width: 768px) {
+  .header .container p.cite {
+    font-size: 0.75rem;
+  }
+}
+.header .container p.cite .fm {
+  width: unset;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid aqua;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .header .container p.cite .fm {
+    height: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .header .container p.cite .fm {
+    border-width: 1px;
+    height: 20px;
+  }
+}
+.header .container p.cite .fm:hover {
+  transform: scale(1.1);
+}
+.header .container p.cite a {
+  text-decoration: none;
+}
+.header .container p.cite a:hover {
+  text-decoration: underline;
+}
+
+.gallery .container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
+.gallery .container .project-window {
+  width: 75%;
+  height: 350px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.gallery .container .project-window.show {
+  opacity: 1;
+  visibility: visible;
+}
+.gallery .container .project-window .project-image {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+.gallery .container .project-window .project-image .fm {
+  position: absolute;
+  width: unset;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid aqua;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100000;
+}
+.gallery .container .project-window .project-image .fm:hover {
+  transform: unset;
+}
+.gallery .container .project-window .project-image img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+.gallery .container .project-window .project-image img:hover {
+  transform: scale(1.05);
+}
+.gallery .container .project-window .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  background: #00b4db; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083b0, #00b4db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 1rem;
+}
+.gallery .container .project-window .content h4 {
+  width: -moz-fit-content;
+  width: fit-content;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #fff;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+}
+.gallery .container .project-window .content .links {
+  display: flex;
+}
+.gallery .container .project-window .content .links a {
+  display: inline-block;
+}
+.gallery .container .project-window .content .links .link img {
+  width: 35px;
+  margin-right: 1rem;
+  transition: all 0.3s;
+}
+.gallery .container .project-window .content .links .link img:hover {
+  transform: scale(1.1);
+}
+
+.container .project-window {
+  position: relative;
+}
+.container .project-window #electric,
+.container .project-window .imp {
+  font-size: 0.8rem;
+  font-family: "Potta One", cursive;
+  letter-spacing: 3px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 100;
+  color: #fff;
+  background: #f953c6; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b91d73, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0.35rem 0.75rem;
+  display: flex;
+  border-radius: 50px;
+  animation: glow 0.5s ease-in-out infinite alternate;
+}
+.container .project-window #impnew {
+  right: 105px;
+}
+.container .project-window .imp {
+  background: #96e6a1; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #d4fc79, #96e6a1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00b4db, 0 0 40px #00b4db, 0 0 50px #00b4db, 0 0 60px #00b4db, 0 0 70px #00b4db;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #130f40, 0 0 40px #130f40, 0 0 50px #130f40, 0 0 60px #130f40, 0 0 70px #130f40, 0 0 80px #130f40;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+  body h1 {
+    font-size: 30px !important;
+  }
+  body #star {
+    height: 15px !important;
+    width: 15px;
+    top: 0.5rem;
+  }
+  body #star:nth-child(1) {
+    left: 1rem;
+  }
+  body #star:nth-child(2) {
+    right: 1rem;
+  }
+  .header .container p img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.35rem;
+    margin-left: 0.35rem;
+  }
+  .gallery .container {
+    grid-template-columns: 1fr;
+  }
+  .gallery .container .project-window {
+    width: 70%;
+    height: 300px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}/*# sourceMappingURL=style.css.map */
