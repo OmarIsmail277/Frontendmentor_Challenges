@@ -177,7 +177,7 @@ body {
   display: inline-block;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -1.875rem;
   background: none;
   border: none;
   cursor: pointer;
