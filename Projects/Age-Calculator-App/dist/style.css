@@ -81,14 +81,16 @@ body {
 }
 @media (max-width: 767px) {
   .age-calc-box {
-    width: 40.625rem;
+    width: 31.25rem;
     height: 31.25rem;
+    padding: 1.25rem 2.5rem;
   }
 }
 @media (max-width: 600px) {
   .age-calc-box {
-    width: 26.25rem;
-    height: 25rem;
+    width: 23.75rem;
+    height: 21.875rem;
+    padding: 0rem 1.875rem;
   }
 }
 .age-calc-box .dob__form {
@@ -99,6 +101,16 @@ body {
   align-items: center;
   gap: 0.625rem;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .age-calc-box .dob__form {
+    height: 11.25rem;
+  }
+}
+@media (max-width: 600px) {
+  .age-calc-box .dob__form {
+    height: 10rem;
+  }
 }
 .age-calc-box .dob__form .dob__form-fields-container {
   width: 100%;
@@ -137,7 +149,7 @@ body {
   .age-calc-box .dob__form .dob-form__field .dob-form__input {
     font-size: 1.25rem;
     height: 3.75rem;
-    width: 75;
+    width: 7.1875rem;
   }
 }
 @media (max-width: 600px) {
@@ -172,15 +184,20 @@ body {
   font-style: italic;
   font-family: "Poppins", sans-serif;
   margin-top: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   .age-calc-box .time-counter {
     font-size: 2.5rem;
+    height: 50%;
   }
 }
 @media (max-width: 600px) {
   .age-calc-box .time-counter {
     font-size: 1.875rem;
+    height: 50%;
   }
 }
 .age-calc-box .time-counter .time-counter__unit .time-counter__value {
