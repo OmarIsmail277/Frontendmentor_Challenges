@@ -33,14 +33,29 @@ body {
   border-bottom-right-radius: 25%;
   padding: rem(50);
 
+  @media (max-width: 767px) {
+    width: rem(650);
+    height: rem(500);
+  }
+  @media (max-width: 600px) {
+    width: rem(420);
+    height: rem(400);
+  }
+
   .dob__form {
     position: relative;
     height: rem(190);
     border-bottom: 1px solid $light-grey;
-    width: 100%;
     display: flex;
     align-items: center;
     gap: rem(10);
+    width: 100%;
+
+    .dob__form-fields-container {
+      width: 100%;
+      display: flex;
+      gap: rem(10);
+    }
 
     .dob-form__field {
       display: flex;
@@ -65,12 +80,23 @@ body {
         font-family: "Poppins", sans-serif;
         font-weight: bold;
         padding: rem(12);
+        height: rem(70);
         width: rem(150);
         outline: none;
         border: 1px solid $light-grey;
-        height: rem(70);
         font-size: rem(25);
         border-radius: 5px;
+
+        @media (max-width: 767px) {
+          font-size: rem(20);
+
+          height: rem(60);
+          width: (75);
+        }
+        @media (max-width: 600px) {
+          height: rem(55);
+          width: rem(80);
+        }
 
         &.error {
           border-color: $light-red;
@@ -102,6 +128,14 @@ body {
     font-weight: 900;
     font-style: italic;
     font-family: "Poppins", sans-serif;
+    margin-top: rem(10);
+
+    @media (max-width: 767px) {
+      font-size: rem(40);
+    }
+    @media (max-width: 600px) {
+      font-size: rem(30);
+    }
 
     .time-counter__unit {
       .time-counter__value {

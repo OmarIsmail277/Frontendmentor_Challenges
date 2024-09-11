@@ -67,13 +67,30 @@ body {
   border-bottom-right-radius: 25%;
   padding: 3.125rem;
 }
+@media (max-width: 767px) {
+  .age-calc-box {
+    width: 40.625rem;
+    height: 31.25rem;
+  }
+}
+@media (max-width: 600px) {
+  .age-calc-box {
+    width: 26.25rem;
+    height: 25rem;
+  }
+}
 .age-calc-box .dob__form {
   position: relative;
   height: 11.875rem;
   border-bottom: 1px solid hsl(0, 0%, 86%);
-  width: 100%;
   display: flex;
   align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+}
+.age-calc-box .dob__form .dob__form-fields-container {
+  width: 100%;
+  display: flex;
   gap: 0.625rem;
 }
 .age-calc-box .dob__form .dob-form__field {
@@ -97,12 +114,25 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   padding: 0.75rem;
+  height: 4.375rem;
   width: 9.375rem;
   outline: none;
   border: 1px solid hsl(0, 0%, 86%);
-  height: 4.375rem;
   font-size: 1.5625rem;
   border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .age-calc-box .dob__form .dob-form__field .dob-form__input {
+    font-size: 1.25rem;
+    height: 3.75rem;
+    width: 75;
+  }
+}
+@media (max-width: 600px) {
+  .age-calc-box .dob__form .dob-form__field .dob-form__input {
+    height: 3.4375rem;
+    width: 5rem;
+  }
 }
 .age-calc-box .dob__form .dob-form__field .dob-form__input.error {
   border-color: rgb(255, 87, 87);
@@ -129,6 +159,17 @@ body {
   font-weight: 900;
   font-style: italic;
   font-family: "Poppins", sans-serif;
+  margin-top: 0.625rem;
+}
+@media (max-width: 767px) {
+  .age-calc-box .time-counter {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .age-calc-box .time-counter {
+    font-size: 1.875rem;
+  }
 }
 .age-calc-box .time-counter .time-counter__unit .time-counter__value {
   color: #854dff;
