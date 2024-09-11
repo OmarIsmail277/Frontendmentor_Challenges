@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="age-calc-box">
+      <!-- Form -->
+      <form action="#" class="dob__form">
+        <!-- Form Fields -->
+        <div class="dob-form__field">
+          <label class="dob-form__label" for="day">Day</label>
+          <input
+            class="dob-form__input"
+            type="text"
+            id="day"
+            placeholder="DD"
+            maxlength="2"
+          />
+          <p id="day-error-message" class="error-message"></p>
+        </div>
+        <div class="dob-form__field">
+          <label class="dob-form__label" for="month">Month</label>
+          <input
+            class="dob-form__input"
+            type="text"
+            id="month"
+            placeholder="MM"
+            maxlength="2"
+          />
+          <p id="month-error-message" class="error-message"></p>
+        </div>
+        <div class="dob-form__field">
+          <label class="dob-form__label" for="year">Year</label>
+          <input
+            class="dob-form__input"
+            type="text"
+            id="year"
+            placeholder="YYYY"
+            maxlength="4"
+          />
+          <p id="year-error-message" class="error-message"></p>
+        </div>
+
+        <button type="submit" class="dob-form__submit">
+          <img
+            src="./assets/images/icon-arrow.svg"
+            alt="submit"
+            class="dob-form__submit-icon"
+          />
+        </button>
+      </form>
+      <div class="time-counter">
+        <div class="time-counter__unit">
+          <span id="years-counter" class="time-counter__value">--</span>
+          <span class="time-counter__label">years</span>
+        </div>
+        <div class="time-counter__unit">
+          <span id="months-counter" class="time-counter__value">--</span>
+          <span class="time-counter__label">months</span>
+        </div>
+        <div class="time-counter__unit">
+          <span id="days-counter" class="time-counter__value">--</span>
+          <span class="time-counter__label">days</span>
+        </div>
+      </div>
+    </div>
+    <script defer src="./script.js"></script>
+  </body>
+</html>
