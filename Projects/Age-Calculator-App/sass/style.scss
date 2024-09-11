@@ -23,6 +23,17 @@ body {
   position: absolute;
   font-size: rem(11);
   bottom: rem(25);
+
+  @media (max-width: 767px) {
+    bottom: rem(40);
+
+    font-size: rem(8);
+  }
+  @media (max-width: 600px) {
+    bottom: rem(35);
+
+    font-size: rem(7);
+  }
 }
 
 .age-calc-box {
@@ -54,7 +65,7 @@ body {
     .dob__form-fields-container {
       width: 100%;
       display: flex;
-      gap: rem(10);
+      gap: rem(20);
     }
 
     .dob-form__field {

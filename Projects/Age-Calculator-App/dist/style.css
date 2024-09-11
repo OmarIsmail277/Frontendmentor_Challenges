@@ -58,6 +58,18 @@ body {
   font-size: 0.6875rem;
   bottom: 1.5625rem;
 }
+@media (max-width: 767px) {
+  .error-message {
+    bottom: 2.5rem;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .error-message {
+    bottom: 2.1875rem;
+    font-size: 0.4375rem;
+  }
+}
 
 .age-calc-box {
   width: 52.5rem;
@@ -91,7 +103,7 @@ body {
 .age-calc-box .dob__form .dob__form-fields-container {
   width: 100%;
   display: flex;
-  gap: 0.625rem;
+  gap: 1.25rem;
 }
 .age-calc-box .dob__form .dob-form__field {
   display: flex;
